@@ -1,6 +1,7 @@
 services:
   mqtt:
     image: eclipse-mosquitto
+    container_name: mosquitto
     restart: unless-stopped
     ports:
       - "8883:8883"
@@ -30,6 +31,7 @@ services:
     container_name: telegraf
     depends_on:
       - influxdb
+      - mqtt
     volumes:
       - ./telegraf.conf:/etc/telegraf/telegraf.conf:ro
       - ./mosquitto/certs/ca.crt:/etc/telegraf/ca.crt:ro
