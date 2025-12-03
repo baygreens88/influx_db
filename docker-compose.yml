@@ -6,10 +6,7 @@ services:
     ports:
       - "8883:8883"
     volumes:
-      - ./mosquitto/config/mosquitto.conf:/mosquitto/config/mosquitto.conf
-      - ./mosquitto/certs:/mosquitto/certs
-      - ./mosquitto/config/passwd:/mosquitto/config/passwd
-      - ./mosquitto/data:/mosquitto/data
+      - ./mosquitto:/mosquitto
 
   influxdb:
     image: influxdb:latest
