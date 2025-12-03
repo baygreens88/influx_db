@@ -1,10 +1,12 @@
 services:
-  mqtt:
+  mosquitto:
     image: eclipse-mosquitto
     container_name: mosquitto
     restart: unless-stopped
     ports:
       - "8883:8883"
+    expose:
+      - "1883" 
     volumes:
       - ./mosquitto:/mosquitto
 
@@ -28,7 +30,7 @@ services:
     container_name: telegraf
     depends_on:
       - influxdb
-      - mqtt
+      - mosquitto
     volumes:
       - ./telegraf.conf:/etc/telegraf/telegraf.conf:ro
       - ./mosquitto/certs/ca.crt:/etc/telegraf/ca.crt:ro
@@ -59,19 +61,49 @@ services:
     command: agent -dev -client=0.0.0.0
     volumes:
       - consul-data:/consul/data
+
   mqtt-register:
-      image: curlimages/curl:latest
-      container_name: mqtt-register
-      depends_on:
-        - mqtt
-        - consul
-      volumes:
-        - ./consul:/consul
-      entrypoint: >
-        sh -c "
-        curl --request PUT --data @/consul/mosquitto-consul.json http://consul:8500/v1/agent/service/register
-        "
-      restart: "no"
+    image: curlimages/curl:latest
+    container_name: mqtt-register
+    depends_on:
+      - mosquitto
+      - consul
+    volumes:
+      - ./consul:/consul
+    entrypoint: >
+      sh -c "
+      curl --request PUT --data @/consul/mosquitto-consul.json http://consul:8500/v1/agent/service/register
+      "
+    restart: "no"
+
+  prometheus:
+    image: prom/prometheus
+    container_name: prometheus
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./prometheus/prometheus.yml:/etc/prometheus/prometheus.yml:ro
+    restart: unless-stopped
+
+  node_exporter:
+    image: prom/node-exporter
+    container_name: node_exporter
+    ports:
+      - "9100:9100"
+    restart: unless-stopped
+
+  mosquitto-exporter:
+    image: sapcc/mosquitto-exporter
+    container_name: mosquitto-exporter
+    ports:
+      - "9234:9234"
+    environment:
+      - BROKER_ENDPOINT=tcp://mosquitto:1883
+      - MQTT_USER=scraper
+      - MQTT_PASS=telemetrics
+    restart: unless-stopped
+    depends_on:
+      - mosquitto
 
 volumes:
   influxdb2:
