@@ -93,7 +93,8 @@ services:
     restart: unless-stopped
 
   mosquitto-exporter:
-    image: sapcc/mosquitto-exporter
+    image: jryberg/mosquitto-exporter:v0.7.7
+    platform: linux/arm64
     container_name: mosquitto-exporter
     ports:
       - "9234:9234"
