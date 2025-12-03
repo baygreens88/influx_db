@@ -1,0 +1,32 @@
+global:
+  scrape_interval: 15s
+
+scrape_configs:
+  - job_name: "prometheus"
+    static_configs:
+      - targets: ["localhost:9090"]
+
+  - job_name: "node"
+    static_configs:
+      - targets: ["node_exporter:9100"]
+
+  - job_name: "mosquitto"
+    static_configs:
+      - targets: ["mosquitto-exporter:9234"]
+
+  - job_name: "consul"
+    metrics_path: "/v1/agent/metrics"
+    params:
+      format: [prometheus]
+    static_configs:
+      - targets: ["consul:8500"]
+
+  # Example: scrape your Mosquitto broker if you add an exporter
+  # - job_name: "mosquitto"
+  #   static_configs:
+  #     - targets: ["mosquitto-exporter:9234"]
+
+  # Example: scrape your containers if you use cadvisor
+  # - job_name: "cadvisor"
+  #   static_configs:
+  #     - targets: ["cadvisor:8080"]
