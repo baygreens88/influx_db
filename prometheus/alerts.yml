@@ -1,0 +1,19 @@
+groups:
+  - name: mqtt_sensors
+    rules:
+      - alert: WaterLevelHigh
+        expr: 'mqtt_consumer_s2{service_id="hem-wc-prod"} > 0'
+        for: 1m
+        labels:
+          severity: warning
+        annotations:
+          summary: "Water Level High"
+          description: "Water Level high for extended period"
+      - alert: ManualModeTooLong
+        expr: 'mqtt_consumer_relay_mode{service_id="hem-wc-prod"} < 1'
+        for: 1m
+        labels:
+          severity: warning
+        annotations:
+          summary: "Manual Mode Too Long"
+          description: "Manual Mode for extended period, need to set to auto relay mode back soon"
