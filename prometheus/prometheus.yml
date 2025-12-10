@@ -31,6 +31,10 @@ scrape_configs:
     static_configs:
       - targets: ['telegraf:9273']   # use the Telegraf container name if in Docker network
 
+  - job_name: 'pushgateway'
+    static_configs:
+      - targets: ['pushgateway:9091']
+
   # Example: scrape your Mosquitto broker if you add an exporter
   # - job_name: "mosquitto"
   #   static_configs:

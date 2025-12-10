@@ -86,6 +86,13 @@ services:
       - ./prometheus/alerts.yml:/etc/prometheus/alerts.yml:ro
     restart: unless-stopped
 
+  pushgateway:
+    image: prom/pushgateway
+    container_name: pushgateway
+    ports:
+      - "9091:9091"
+    restart: unless-stopped
+
   alertmanager:
     image: prom/alertmanager:latest
     container_name: alertmanager
