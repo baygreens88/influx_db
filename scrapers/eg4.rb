@@ -12,7 +12,7 @@ options.add_argument('--headless=new')
 options.add_argument('--disable-gpu')
 options.add_argument('--no-sandbox')
 options.add_argument('--disable-dev-shm-usage')
-driver = Selenium::WebDriver.for :remote, url: "http://localhost:63306", options: options
+driver = Selenium::WebDriver.for :remote, url: "http://localhost:56311", options: options
 
 # Navigate to a website
 driver.navigate.to "https://monitor.eg4electronics.com/WManage/web/login"
@@ -93,10 +93,10 @@ inverter_power.set(epsPower, labels: { location: 'hemlock', device: 'eg4-18k'})
 
 daily_yield = Prometheus::Client::Gauge.new(:day_yield, docstring: 'daily solar yeild in kwh', labels: [:location, :device])
 registry.register(daily_yield)
-inverter_power.set(todayYield, labels: { location: 'hemlock', device: 'eg4-18k'})
+daily_yield.set(todayYield, labels: { location: 'hemlock', device: 'eg4-18k'})
 
 daily_consumption = Prometheus::Client::Gauge.new(:day_consumption, docstring: 'daily power consumption in kwh', labels: [:location, :device])
 registry.register(daily_consumption)
-inverter_power.set(todayUsage, labels: { location: 'hemlock', device: 'eg4-18k'})
+daily_consumption.set(todayUsage, labels: { location: 'hemlock', device: 'eg4-18k'})
 
 push.add(registry)
