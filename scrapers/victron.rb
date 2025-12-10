@@ -40,8 +40,8 @@ data = JSON.parse(response.body)
 #total_pv_power is located in [records{"id": 259}]
 #pv_south_power is located in [records{"id": 235}]
 #pv_west_power is located in [records{"id": 212}]
-#l1_consumption is located in [records{"id": 254}]
-#l2_consumption is located in [records{"id": 246}]
+#l1_consumption is located in [records{"id": 260}]
+#l2_consumption is located in [records{"id": 261}]
 
 #daily_yield_south is located in [records{"id": 238}]
 #daily_yield_west is located in [records{"id": 215}]
@@ -69,9 +69,9 @@ data['records'].each do |record|
     pv_south_power = record['rawValue'].to_f
   when 212
     pv_west_power = record['rawValue'].to_f
-  when 254
+  when 260
     l1_consumption = record['rawValue'].to_f
-  when 246
+  when 261
     l2_consumption = record['rawValue'].to_f
   when 238
     daily_yield_south = record['rawValue'].to_f
@@ -105,6 +105,10 @@ soc_gauge.set(battery_soc, labels: { location: 'hemlock', device: 'victron'})
 total_pv_power_gauge = Prometheus::Client::Gauge.new(:total_pv_power, docstring: 'total pv power in watts', labels: [:location, :device])
 registry.register(total_pv_power_gauge)
 total_pv_power_gauge.set(total_pv_power, labels: { location: 'hemlock', device: 'victron'})
+
+inverter_power_gauge = Prometheus::Client::Gauge.new(:inverter_power, docstring: 'inverter output power in watts', labels: [:location, :device])
+registry.register(inverter_power_gauge)
+inverter_power_gauge.set(l1_consumption + l2_consumption, labels: { location: 'hemlock', device: 'victron'})
 
 string_power = Prometheus::Client::Gauge.new(:string_pv_power, docstring: 'substring power in watts', labels: [:location, :device, :string])
 registry.register(string_power)
