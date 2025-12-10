@@ -3,11 +3,11 @@
 <plist version="1.0">
 <dict>
     <key>Label</key>
-    <string>com.scraper.tao</string>
+    <string>com.scraper.victron.tao</string>
     <key>ProgramArguments</key>
     <array>
         <string>/Users/taolong/.rubies/ruby-3.2.2/bin/ruby</string>
-        <string>/Users/taolong/Workspaces/influx_db/scrapers/eg4.rb</string>
+        <string>/Users/taolong/Workspaces/influx_db/scrapers/victron.rb</string>
     </array>
     <key>EnvironmentVariables</key>
     <dict>
@@ -24,8 +24,8 @@
     <key>StartInterval</key>
     <integer>300</integer>
     <key>StandardOutPath</key>
-    <string>/tmp/scraper.log</string>
+    <string>/tmp/scraper.victron.log</string>
     <key>StandardErrorPath</key>
-    <string>/tmp/scraper.err</string>
+    <string>/tmp/scraper.victron.err</string>
 </dict>
 </plist>

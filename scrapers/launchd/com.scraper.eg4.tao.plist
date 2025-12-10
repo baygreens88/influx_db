@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.scraper.eg4.tao</string>
+    <key>ProgramArguments</key>
+    <array>
+        <string>/Users/taolong/.rubies/ruby-3.2.2/bin/ruby</string>
+        <string>/Users/taolong/Workspaces/influx_db/scrapers/eg4.rb</string>
+    </array>
+    <key>EnvironmentVariables</key>
+    <dict>
+        <key>PATH</key>
+        <!-- Replace with your actual gem path from 'gem env' -->
+        <string>/Users/taolong/.rubies/ruby-3.2.2/bin</string>
+        <key>GEM_HOME</key>
+         <!-- Replace with your actual gem home path -->
+        <string>/Users/taolong/.gem/ruby/3.2.2</string>
+        <key>GEM_PATH</key>
+         <!-- Replace with your actual gem path -->
+        <string>/Users/taolong/.gem/ruby/3.2.2:/Users/taolong/.rubies/ruby-3.2.2/lib/ruby/gems/3.2.0</string>
+    </dict>
+    <key>StartInterval</key>
+    <integer>300</integer>
+    <key>StandardOutPath</key>
+    <string>/tmp/scraper.eg4.log</string>
+    <key>StandardErrorPath</key>
+    <string>/tmp/scraper.eg4.err</string>
+</dict>
+</plist>
