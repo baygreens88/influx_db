@@ -51,10 +51,16 @@ pv3Power = driver.find_element(class: 'pv3PowerText').text.strip.to_i
 
 totalPVPower = pv1Power + pv2Power + pv3Power
 
+l1_consumption = driver.find_element(class: 'epsL1nText').text.strip.to_i
+l2_consumption = driver.find_element(class: 'epsL2nText').text.strip.to_i
+
 puts "PV1: ", pv1Power
 puts "PV2: ", pv2Power
 puts "PV3: ", pv3Power
 puts "PV: ", totalPVPower
+
+puts "L1 consumption: ", l1_consumption
+puts "L2 consumption: ", l2_consumption
 
 soc = driver.find_element(class: 'socText').text.strip.to_i
 puts "soc: ", soc
@@ -98,5 +104,13 @@ daily_yield.set(todayYield, labels: { location: 'hemlock', device: 'eg4-18k'})
 daily_consumption = Prometheus::Client::Gauge.new(:day_consumption, docstring: 'daily power consumption in kwh', labels: [:location, :device])
 registry.register(daily_consumption)
 daily_consumption.set(todayUsage, labels: { location: 'hemlock', device: 'eg4-18k'})
+
+l1_consumption_gauge = Prometheus::Client::Gauge.new(:l1_consumption, docstring: 'l1 power consumption in watts', labels: [:location, :device])
+registry.register(l1_consumption_gauge)
+l1_consumption_gauge.set(l1_consumption, labels: { location: 'hemlock', device: 'eg4-18k'})
+
+l2_consumption_gauge = Prometheus::Client::Gauge.new(:l2_consumption, docstring: 'l2 power consumption in watts', labels: [:location, :device])
+registry.register(l2_consumption_gauge)
+l2_consumption_gauge.set(l2_consumption, labels: { location: 'hemlock', device: 'eg4-18k'})
 
 push.add(registry)

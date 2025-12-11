@@ -128,4 +128,13 @@ daily_consumption = pv_to_consumption + battery_to_consumption
 daily_consumption_gauge = Prometheus::Client::Gauge.new(:daily_consumption, docstring: 'daily power consumption in kwh', labels: [:location, :device])
 registry.register(daily_consumption_gauge)
 daily_consumption_gauge.set(daily_consumption, labels: { location: 'hemlock', device: 'victron'})
+
+l1_consumption_gauge = Prometheus::Client::Gauge.new(:l1_consumption, docstring: 'l1 power consumption in watts', labels: [:location, :device])
+registry.register(l1_consumption_gauge)
+l1_consumption_gauge.set(l1_consumption, labels: { location: 'hemlock', device: 'victron'})
+
+l2_consumption_gauge = Prometheus::Client::Gauge.new(:l2_consumption, docstring: 'l2 power consumption in watts', labels: [:location, :device])
+registry.register(l2_consumption_gauge)
+l2_consumption_gauge.set(l2_consumption, labels: { location: 'hemlock', device: 'victron'})
+
 push.add(registry)
