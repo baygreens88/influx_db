@@ -9,31 +9,45 @@ require 'json'
 VICTRON_URL_BASE = 'https://vrmapi.victronenergy.com/v2'
 VICTRON_INSTALLATION = '448187'
 VICTRON_TOKEN = 'f58dc8572107e7ccd0ae6f860403872f1efb5fa6010355ed650023c0dd3ba901'
-
 api_url = "#{VICTRON_URL_BASE}/installations/#{VICTRON_INSTALLATION}/diagnostics"
 
-puts "victron url: ", api_url
-
-uri = URI(api_url)
-
-http = Net::HTTP.new(uri.host, uri.port)
-http.use_ssl = true # Enable SSL for HTTPS
-
-request = Net::HTTP::Get.new(uri.request_uri)
-request['x-authorization'] = "Token #{VICTRON_TOKEN}"
-request['Content-Type'] = 'application/json'
-
-response = http.request(request)
-
-if response.is_a?(Net::HTTPSuccess)
-  #pretty print json
-  puts "response 200"
+data = nil
+#check if there is input arguments, if so, first argument is json file with data
+if ARGV.length > 0
+  json_file = ARGV[0]
+  file = File.read(json_file)
+  data = JSON.parse(file)
+  puts "Loaded data from file: #{json_file}"
 else
-  puts "Error: #{response.code} - #{response.message}"
-  exit
+  puts "No input file provided, fetching data from Victron API"
+  puts "victron url: ", api_url
+
+  uri = URI(api_url)
+
+  http = Net::HTTP.new(uri.host, uri.port)
+  http.use_ssl = true # Enable SSL for HTTPS
+
+  request = Net::HTTP::Get.new(uri.request_uri)
+  request['x-authorization'] = "Token #{VICTRON_TOKEN}"
+  request['Content-Type'] = 'application/json'
+
+  response = http.request(request)
+
+  if response.is_a?(Net::HTTPSuccess)
+    #pretty print json
+    puts "response 200"
+  else
+    puts "Error: #{response.code} - #{response.message}"
+    exit
+  end
+
+  data = JSON.parse(response.body)
 end
 
-data = JSON.parse(response.body)
+unless data && data['records']
+  puts "Error: Invalid data format"
+  exit
+end
 
 #extract relevant fields
 #battery soc is located in [records{"id": 177}]
@@ -48,8 +62,10 @@ data = JSON.parse(response.body)
 
 #pv_to_consumption is located in [records{"id": 257}]
 #battery_to_consumption is located in [records{"id": 258}]
+
+
+#need to replace id with idDataAttribute
 battery_soc = nil
-total_pv_power = nil
 pv_south_power = nil
 pv_west_power = nil
 l1_consumption = nil
@@ -58,32 +74,46 @@ daily_yield_south = nil
 daily_yield_west = nil
 pv_to_consumption = nil
 battery_to_consumption = nil
+ac_input_power_l1 = nil
+ac_input_power_l2 = nil
 
 data['records'].each do |record|
-  case record['id']
-  when 177
+  case record['idDataAttribute']
+  when 17
+    ac_input_power_l1 = record['rawValue'].to_f
+  when 18
+    ac_input_power_l2 = record['rawValue'].to_f
+  when 51
     battery_soc = record['rawValue'].to_f
-  when 259
-    total_pv_power = record['rawValue'].to_f
-  when 235
-    pv_south_power = record['rawValue'].to_f
-  when 212
-    pv_west_power = record['rawValue'].to_f
-  when 260
+  when 442
+    case record['instance']
+    when 279
+      pv_west_power = record['rawValue'].to_f
+    when 278
+      pv_south_power = record['rawValue'].to_f
+    end
+  when 567
     l1_consumption = record['rawValue'].to_f
-  when 261
+  when 568
     l2_consumption = record['rawValue'].to_f
-  when 238
-    daily_yield_south = record['rawValue'].to_f
-  when 215
-    daily_yield_west = record['rawValue'].to_f
-  when 257
+  when 94
+    case record['instance']
+    when 279
+      daily_yield_west = record['rawValue'].to_f
+    when 278
+      daily_yield_south = record['rawValue'].to_f
+    end
+  when 104
     pv_to_consumption = record['rawValue'].to_f
-  when 258
+  when 105
     battery_to_consumption = record['rawValue'].to_f
   end
 end
 
+total_pv_power = pv_south_power + pv_west_power
+
+puts "ac input power l1: ", ac_input_power_l1
+puts "ac input power l2: ", ac_input_power_l2
 puts "battery soc: ", battery_soc
 puts "total pv power: ", total_pv_power
 puts "pv south power: ", pv_south_power
@@ -95,8 +125,20 @@ puts "daily yield west: ", daily_yield_west
 puts "pv to consumption: ", pv_to_consumption
 puts "battery to consumption: ", battery_to_consumption
 
+if ARGV.length > 0
+  puts "Data loaded from file, not pushing to Prometheus Pushgateway."
+  exit
+end
+
 registry = Prometheus::Client.registry
 push = Prometheus::Client::Push.new(job: "ruby-victron-scraper", gateway: "http://localhost:9091")
+
+ac_input_power_gauge_l1 = Prometheus::Client::Gauge.new(:ac_input_power_l1, docstring: 'ac input power l1 in watts', labels: [:location, :device])
+registry.register(ac_input_power_gauge_l1)
+ac_input_power_gauge_l1.set(ac_input_power_l1, labels: { location: 'hemlock', device: 'victron'})
+ac_input_power_gauge_l2 = Prometheus::Client::Gauge.new(:ac_input_power_l2, docstring: 'ac input power l2 in watts', labels: [:location, :device])
+registry.register(ac_input_power_gauge_l2)
+ac_input_power_gauge_l2.set(ac_input_power_l2, labels: { location: 'hemlock', device: 'victron'})
 
 soc_gauge = Prometheus::Client::Gauge.new(:battery_soc, docstring: 'battery state of charge in percent', labels: [:location, :device])
 registry.register(soc_gauge)
