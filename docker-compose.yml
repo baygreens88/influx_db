@@ -176,6 +176,17 @@ services:
       - vault-agent
       - pushgateway
 
+  homeassistant:
+    image: homeassistant/home-assistant:stable
+    container_name: homeassistant
+    restart: unless-stopped
+    ports:
+      - "8123:8123"
+    volumes:
+      - ./homeassistant/config:/config
+    environment:
+      - TZ=America/Los_Angeles
+
 volumes:
   influxdb2:
   grafana_data:
