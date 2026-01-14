@@ -20,10 +20,22 @@ driver.navigate.to "https://monitor.eg4electronics.com/WManage/web/login"
 #driver.wait.until { driver.find_element(id: 'account') }
 
 # fill in the login form
-eg4_username = ENV['EG4_USERNAME']
-eg4_password = ENV['EG4_PASSWORD']
+creds_path = ENV.fetch('EG4_CREDS_FILE', File.expand_path('eg4.creds', __dir__))
+creds = {}
+if File.exist?(creds_path)
+  File.read(creds_path).each_line do |line|
+    line = line.strip
+    next if line.empty? || line.start_with?('#')
+    key, value = line.split('=', 2)
+    next if key.nil? || value.nil?
+    creds[key.strip] = value.strip
+  end
+end
+
+eg4_username = creds['EG4_USERNAME']
+eg4_password = creds['EG4_PASSWORD']
 if eg4_username.nil? || eg4_password.nil? || eg4_username.strip.empty? || eg4_password.strip.empty?
-  puts "EG4_USERNAME and EG4_PASSWORD are required"
+  puts "EG4_USERNAME and EG4_PASSWORD are required in #{creds_path}"
   driver.quit
   exit
 end

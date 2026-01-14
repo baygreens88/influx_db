@@ -12,3 +12,5 @@ vault-agent/creds/
 vault-agent/file/
 vault-agent/logs/
 vault-agent/token/
+.eg4.creds
+eg4.creds
