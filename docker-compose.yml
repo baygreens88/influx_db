@@ -20,10 +20,10 @@ services:
     environment:
       - DOCKER_INFLUXDB_INIT_MODE=setup
       - DOCKER_INFLUXDB_INIT_USERNAME=admin
-      - DOCKER_INFLUXDB_INIT_PASSWORD=admin123
+      - DOCKER_INFLUXDB_INIT_PASSWORD=${INFLUXDB_INIT_PASSWORD:?INFLUXDB_INIT_PASSWORD is required}
       - DOCKER_INFLUXDB_INIT_ORG=river_org
       - DOCKER_INFLUXDB_INIT_BUCKET=river_bucket
-      - DOCKER_INFLUXDB_INIT_ADMIN_TOKEN=mysecrettoken
+      - DOCKER_INFLUXDB_INIT_ADMIN_TOKEN=${INFLUXDB_INIT_ADMIN_TOKEN:?INFLUXDB_INIT_ADMIN_TOKEN is required}
 
   telegraf:
     image: telegraf:latest
@@ -38,6 +38,8 @@ services:
       - HOST_PROC=/host/proc
       - HOST_SYS=/host/sys
       - HOST_ETC=/host/etc
+      - TELEGRAF_MQTT_USER=${TELEGRAF_MQTT_USER:?TELEGRAF_MQTT_USER is required}
+      - TELEGRAF_MQTT_PASSWORD=${TELEGRAF_MQTT_PASSWORD:?TELEGRAF_MQTT_PASSWORD is required}
 
   grafana:
     image: grafana/grafana:latest
@@ -48,7 +50,7 @@ services:
       - influxdb
     environment:
       - GF_SECURITY_ADMIN_USER=admin
-      - GF_SECURITY_ADMIN_PASSWORD=admin123
+      - GF_SECURITY_ADMIN_PASSWORD=${GRAFANA_ADMIN_PASSWORD:?GRAFANA_ADMIN_PASSWORD is required}
     volumes:
       - grafana_data:/var/lib/grafana
 
@@ -118,13 +120,67 @@ services:
       - "9234:9234"
     environment:
       - BROKER_ENDPOINT=tcp://mosquitto:1883
-      - MQTT_USER=scraper
-      - MQTT_PASS=telemetrics
+      - MQTT_USER=${MOSQUITTO_EXPORTER_USER:?MOSQUITTO_EXPORTER_USER is required}
+      - MQTT_PASS=${MOSQUITTO_EXPORTER_PASS:?MOSQUITTO_EXPORTER_PASS is required}
     restart: unless-stopped
     depends_on:
       - mosquitto
+
+  vault:
+      image: hashicorp/vault:1.21
+      container_name: vault
+      restart: unless-stopped
+      ports:
+        - "8200:8200"
+      cap_add:
+        - IPC_LOCK
+      volumes:
+        - ./vault/config:/vault/config:ro
+        - ./vault/data:/vault/data
+      command: vault server -config=/vault/config/vault.hcl
+
+  vault-agent:
+    image: hashicorp/vault:1.21
+    container_name: vault-agent
+    restart: unless-stopped
+    environment:
+      VAULT_ADDR: "http://vault:8200"
+      ROLE_ID: "${SCRAPER_ROLE_ID:?SCRAPER_ROLE_ID is required}"
+      SECRET_ID: "${SCRAPER_SECRET_ID:?SCRAPER_SECRET_ID is required}"
+    volumes:
+      - ./vault-agent/agent.hcl:/vault/agent.hcl:ro
+      - ./vault-agent/templates:/vault/templates:ro
+      - vault-agent-token:/vault/token
+      - vault-agent-output:/out
+    tmpfs:
+      - /vault/creds
+    command: >
+      sh -c '
+        umask 077 &&
+        echo "$$ROLE_ID" > /vault/creds/role_id &&
+        echo "$$SECRET_ID" > /vault/creds/secret_id &&
+        vault agent -config=/vault/agent.hcl
+      '
+    depends_on:
+      - vault
+
+  victron-scraper:
+    build:
+      context: .
+      dockerfile: scrapers/Dockerfile.victron
+    container_name: victron-scraper
+    restart: unless-stopped
+    volumes:
+      - vault-agent-output:/out:ro
+    depends_on:
+      - vault-agent
+      - pushgateway
 
 volumes:
   influxdb2:
   grafana_data:
   consul-data:
+  vault-agent-creds:
+  vault-agent-token:
+  vault-agent-output:
+  scraper-secrets:

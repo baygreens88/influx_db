@@ -6,9 +6,13 @@ require 'uri'
 require 'json'
 
 #credtentials
-VICTRON_URL_BASE = 'https://vrmapi.victronenergy.com/v2'
-VICTRON_INSTALLATION = '448187'
-VICTRON_TOKEN = 'f58dc8572107e7ccd0ae6f860403872f1efb5fa6010355ed650023c0dd3ba901'
+VICTRON_URL_BASE = ENV.fetch('VICTRON_URL_BASE', 'https://vrmapi.victronenergy.com/v2')
+VICTRON_INSTALLATION = ENV.fetch('VICTRON_INSTALLATION', '448187')
+victron_token = ENV.fetch('VICTRON_API_KEY', ENV['VICTRON_TOKEN'])
+if victron_token.nil? || victron_token.strip.empty?
+  warn "VICTRON_API_KEY is required"
+  exit 1
+end
 api_url = "#{VICTRON_URL_BASE}/installations/#{VICTRON_INSTALLATION}/diagnostics"
 
 data = nil
@@ -28,7 +32,7 @@ else
   http.use_ssl = true # Enable SSL for HTTPS
 
   request = Net::HTTP::Get.new(uri.request_uri)
-  request['x-authorization'] = "Token #{VICTRON_TOKEN}"
+  request['x-authorization'] = "Token #{victron_token}"
   request['Content-Type'] = 'application/json'
 
   response = http.request(request)
@@ -87,9 +91,9 @@ data['records'].each do |record|
     battery_soc = record['rawValue'].to_f
   when 442
     case record['instance']
-    when 279
-      pv_west_power = record['rawValue'].to_f
     when 278
+      pv_west_power = record['rawValue'].to_f
+    when 279
       pv_south_power = record['rawValue'].to_f
     end
   when 567
@@ -98,9 +102,9 @@ data['records'].each do |record|
     l2_consumption = record['rawValue'].to_f
   when 94
     case record['instance']
-    when 279
-      daily_yield_west = record['rawValue'].to_f
     when 278
+      daily_yield_west = record['rawValue'].to_f
+    when 279
       daily_yield_south = record['rawValue'].to_f
     end
   when 104
@@ -131,7 +135,8 @@ if ARGV.length > 0
 end
 
 registry = Prometheus::Client.registry
-push = Prometheus::Client::Push.new(job: "ruby-victron-scraper", gateway: "http://localhost:9091")
+pushgateway = ENV.fetch('PUSHGATEWAY_URL', 'http://pushgateway:9091')
+push = Prometheus::Client::Push.new(job: "ruby-victron-scraper", gateway: pushgateway)
 
 ac_input_power_gauge_l1 = Prometheus::Client::Gauge.new(:ac_input_power_l1, docstring: 'ac input power l1 in watts', labels: [:location, :device])
 registry.register(ac_input_power_gauge_l1)

@@ -1,0 +1,14 @@
+.env
+*.conf~
+*.json~
+*.yml~
+mosquitto/certs/
+mosquitto/data/
+mosquitto/log/
+vault/data/
+vault/file/
+vault/logs/
+vault-agent/creds/
+vault-agent/file/
+vault-agent/logs/
+vault-agent/token/

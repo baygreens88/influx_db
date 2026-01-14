@@ -20,8 +20,15 @@ driver.navigate.to "https://monitor.eg4electronics.com/WManage/web/login"
 #driver.wait.until { driver.find_element(id: 'account') }
 
 # fill in the login form
-driver.find_element(id: 'account').send_keys('longarch')
-driver.find_element(id: 'password').send_keys('Eg44011$')
+eg4_username = ENV['EG4_USERNAME']
+eg4_password = ENV['EG4_PASSWORD']
+if eg4_username.nil? || eg4_password.nil? || eg4_username.strip.empty? || eg4_password.strip.empty?
+  puts "EG4_USERNAME and EG4_PASSWORD are required"
+  driver.quit
+  exit
+end
+driver.find_element(id: 'account').send_keys(eg4_username)
+driver.find_element(id: 'password').send_keys(eg4_password)
 
 puts driver.find_element(id: 'account').attribute('value')
 

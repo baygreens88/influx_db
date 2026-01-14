@@ -1,0 +1,13 @@
+FROM ruby:3.3-alpine
+
+RUN apk add --no-cache ca-certificates \
+  && gem install prometheus-client --no-document
+
+WORKDIR /app
+
+COPY scrapers/victron.rb /app/scrapers/victron.rb
+COPY scrapers/victron-entrypoint.sh /usr/local/bin/victron-entrypoint
+
+RUN chmod +x /usr/local/bin/victron-entrypoint
+
+ENTRYPOINT ["victron-entrypoint"]
