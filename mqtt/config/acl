@@ -1,0 +1,5 @@
+user scraper
+topic readwrite #
+
+user iot_user
+topic readwrite iot/#

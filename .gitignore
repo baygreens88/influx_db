@@ -5,6 +5,7 @@
 mosquitto/certs/
 mosquitto/data/
 mosquitto/log/
+mqtt/config/passwd
 vault/data/
 vault/file/
 vault/logs/

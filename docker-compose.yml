@@ -9,6 +9,15 @@ services:
       - "1883" 
     volumes:
       - ./mosquitto:/mosquitto
+  
+  mqtt:
+    image: eclipse-mosquitto
+    container_name: mqtt
+    restart: unless-stopped
+    ports:
+      - "1883:1883"
+    volumes:
+      - ./mqtt:/mosquitto
 
   influxdb:
     image: influxdb:latest
