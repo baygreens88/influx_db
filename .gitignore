@@ -14,3 +14,12 @@ vault-agent/logs/
 vault-agent/token/
 .eg4.creds
 eg4.creds
+homeassistant/config/.HA_VERSION
+homeassistant/config/.ha_run.lock
+homeassistant/config/.storage/
+homeassistant/config/blueprints/
+homeassistant/config/custom_components/
+homeassistant/config/home-assistant.log
+homeassistant/config/home-assistant.log.*
+homeassistant/config/home-assistant_v2.db*
+homeassistant/config/secrets.yaml
