@@ -145,3 +145,7 @@ sensor:
     value_template: "{{ (value_json.data.result | first).value[1] | float(0) if (value_json.data.result | length) > 0 else 0 }}"
     unit_of_measurement: W
     scan_interval: 60
+
+recorder:
+  purge_keep_days: 90
+  auto_purge: true
