@@ -9,3 +9,139 @@ frontend:
 automation: !include automations.yaml
 script: !include scripts.yaml
 scene: !include scenes.yaml
+
+prometheus:
+
+sensor:
+  - platform: rest
+    name: EG4 Total PV Power
+    resource: http://prometheus:9090/api/v1/query?query=total_pv_power%7Bjob%3D%22pushgateway%22%2Cexported_job%3D%22ruby-eg4-scraper%22%2Clocation%3D%22hemlock%22%2Cdevice%3D%22eg4-18k%22%7D
+    value_template: "{{ (value_json.data.result | first).value[1] | float(0) if (value_json.data.result | length) > 0 else 0 }}"
+    unit_of_measurement: W
+    scan_interval: 60
+  - platform: rest
+    name: EG4 Battery SOC
+    resource: http://prometheus:9090/api/v1/query?query=battery_soc%7Bjob%3D%22pushgateway%22%2Cexported_job%3D%22ruby-eg4-scraper%22%2Clocation%3D%22hemlock%22%2Cdevice%3D%22eg4-18k%22%7D
+    value_template: "{{ (value_json.data.result | first).value[1] | float(0) if (value_json.data.result | length) > 0 else 0 }}"
+    unit_of_measurement: "%"
+    scan_interval: 60
+  - platform: rest
+    name: EG4 Inverter Power
+    resource: http://prometheus:9090/api/v1/query?query=inverter_power%7Bjob%3D%22pushgateway%22%2Cexported_job%3D%22ruby-eg4-scraper%22%2Clocation%3D%22hemlock%22%2Cdevice%3D%22eg4-18k%22%7D
+    value_template: "{{ (value_json.data.result | first).value[1] | float(0) if (value_json.data.result | length) > 0 else 0 }}"
+    unit_of_measurement: W
+    scan_interval: 60
+  - platform: rest
+    name: EG4 Day Yield
+    resource: http://prometheus:9090/api/v1/query?query=day_yield%7Bjob%3D%22pushgateway%22%2Cexported_job%3D%22ruby-eg4-scraper%22%2Clocation%3D%22hemlock%22%2Cdevice%3D%22eg4-18k%22%7D
+    value_template: "{{ (value_json.data.result | first).value[1] | float(0) if (value_json.data.result | length) > 0 else 0 }}"
+    unit_of_measurement: kWh
+    scan_interval: 60
+  - platform: rest
+    name: EG4 Day Consumption
+    resource: http://prometheus:9090/api/v1/query?query=day_consumption%7Bjob%3D%22pushgateway%22%2Cexported_job%3D%22ruby-eg4-scraper%22%2Clocation%3D%22hemlock%22%2Cdevice%3D%22eg4-18k%22%7D
+    value_template: "{{ (value_json.data.result | first).value[1] | float(0) if (value_json.data.result | length) > 0 else 0 }}"
+    unit_of_measurement: kWh
+    scan_interval: 60
+  - platform: rest
+    name: EG4 L1 Consumption
+    resource: http://prometheus:9090/api/v1/query?query=l1_consumption%7Bjob%3D%22pushgateway%22%2Cexported_job%3D%22ruby-eg4-scraper%22%2Clocation%3D%22hemlock%22%2Cdevice%3D%22eg4-18k%22%7D
+    value_template: "{{ (value_json.data.result | first).value[1] | float(0) if (value_json.data.result | length) > 0 else 0 }}"
+    unit_of_measurement: W
+    scan_interval: 60
+  - platform: rest
+    name: EG4 L2 Consumption
+    resource: http://prometheus:9090/api/v1/query?query=l2_consumption%7Bjob%3D%22pushgateway%22%2Cexported_job%3D%22ruby-eg4-scraper%22%2Clocation%3D%22hemlock%22%2Cdevice%3D%22eg4-18k%22%7D
+    value_template: "{{ (value_json.data.result | first).value[1] | float(0) if (value_json.data.result | length) > 0 else 0 }}"
+    unit_of_measurement: W
+    scan_interval: 60
+  - platform: rest
+    name: EG4 String Power East
+    resource: http://prometheus:9090/api/v1/query?query=string_pv_power%7Bjob%3D%22pushgateway%22%2Cexported_job%3D%22ruby-eg4-scraper%22%2Clocation%3D%22hemlock%22%2Cdevice%3D%22eg4-18k%22%2Cstring%3D%22east%22%7D
+    value_template: "{{ (value_json.data.result | first).value[1] | float(0) if (value_json.data.result | length) > 0 else 0 }}"
+    unit_of_measurement: W
+    scan_interval: 60
+  - platform: rest
+    name: EG4 String Power South
+    resource: http://prometheus:9090/api/v1/query?query=string_pv_power%7Bjob%3D%22pushgateway%22%2Cexported_job%3D%22ruby-eg4-scraper%22%2Clocation%3D%22hemlock%22%2Cdevice%3D%22eg4-18k%22%2Cstring%3D%22south%22%7D
+    value_template: "{{ (value_json.data.result | first).value[1] | float(0) if (value_json.data.result | length) > 0 else 0 }}"
+    unit_of_measurement: W
+    scan_interval: 60
+  - platform: rest
+    name: EG4 String Power North
+    resource: http://prometheus:9090/api/v1/query?query=string_pv_power%7Bjob%3D%22pushgateway%22%2Cexported_job%3D%22ruby-eg4-scraper%22%2Clocation%3D%22hemlock%22%2Cdevice%3D%22eg4-18k%22%2Cstring%3D%22north%22%7D
+    value_template: "{{ (value_json.data.result | first).value[1] | float(0) if (value_json.data.result | length) > 0 else 0 }}"
+    unit_of_measurement: W
+    scan_interval: 60
+  - platform: rest
+    name: Victron Total PV Power
+    resource: http://prometheus:9090/api/v1/query?query=total_pv_power%7Bjob%3D%22pushgateway%22%2Cexported_job%3D%22ruby-victron-scraper%22%2Clocation%3D%22hemlock%22%2Cdevice%3D%22victron%22%7D
+    value_template: "{{ (value_json.data.result | first).value[1] | float(0) if (value_json.data.result | length) > 0 else 0 }}"
+    unit_of_measurement: W
+    scan_interval: 60
+  - platform: rest
+    name: Victron Battery SOC
+    resource: http://prometheus:9090/api/v1/query?query=battery_soc%7Bjob%3D%22pushgateway%22%2Cexported_job%3D%22ruby-victron-scraper%22%2Clocation%3D%22hemlock%22%2Cdevice%3D%22victron%22%7D
+    value_template: "{{ (value_json.data.result | first).value[1] | float(0) if (value_json.data.result | length) > 0 else 0 }}"
+    unit_of_measurement: "%"
+    scan_interval: 60
+  - platform: rest
+    name: Victron Inverter Power
+    resource: http://prometheus:9090/api/v1/query?query=inverter_power%7Bjob%3D%22pushgateway%22%2Cexported_job%3D%22ruby-victron-scraper%22%2Clocation%3D%22hemlock%22%2Cdevice%3D%22victron%22%7D
+    value_template: "{{ (value_json.data.result | first).value[1] | float(0) if (value_json.data.result | length) > 0 else 0 }}"
+    unit_of_measurement: W
+    scan_interval: 60
+  - platform: rest
+    name: Victron Daily Yield
+    resource: http://prometheus:9090/api/v1/query?query=daily_yield%7Bjob%3D%22pushgateway%22%2Cexported_job%3D%22ruby-victron-scraper%22%2Clocation%3D%22hemlock%22%2Cdevice%3D%22victron%22%7D
+    value_template: "{{ (value_json.data.result | first).value[1] | float(0) if (value_json.data.result | length) > 0 else 0 }}"
+    unit_of_measurement: kWh
+    scan_interval: 60
+  - platform: rest
+    name: Victron Daily Consumption
+    resource: http://prometheus:9090/api/v1/query?query=daily_consumption%7Bjob%3D%22pushgateway%22%2Cexported_job%3D%22ruby-victron-scraper%22%2Clocation%3D%22hemlock%22%2Cdevice%3D%22victron%22%7D
+    value_template: "{{ (value_json.data.result | first).value[1] | float(0) if (value_json.data.result | length) > 0 else 0 }}"
+    unit_of_measurement: kWh
+    scan_interval: 60
+  - platform: rest
+    name: Victron Total Consumption
+    resource: http://prometheus:9090/api/v1/query?query=total_consumption%7Bjob%3D%22pushgateway%22%2Cexported_job%3D%22ruby-victron-scraper%22%2Clocation%3D%22hemlock%22%2Cdevice%3D%22victron%22%7D
+    value_template: "{{ (value_json.data.result | first).value[1] | float(0) if (value_json.data.result | length) > 0 else 0 }}"
+    unit_of_measurement: W
+    scan_interval: 60
+  - platform: rest
+    name: Victron L1 Consumption
+    resource: http://prometheus:9090/api/v1/query?query=l1_consumption%7Bjob%3D%22pushgateway%22%2Cexported_job%3D%22ruby-victron-scraper%22%2Clocation%3D%22hemlock%22%2Cdevice%3D%22victron%22%7D
+    value_template: "{{ (value_json.data.result | first).value[1] | float(0) if (value_json.data.result | length) > 0 else 0 }}"
+    unit_of_measurement: W
+    scan_interval: 60
+  - platform: rest
+    name: Victron L2 Consumption
+    resource: http://prometheus:9090/api/v1/query?query=l2_consumption%7Bjob%3D%22pushgateway%22%2Cexported_job%3D%22ruby-victron-scraper%22%2Clocation%3D%22hemlock%22%2Cdevice%3D%22victron%22%7D
+    value_template: "{{ (value_json.data.result | first).value[1] | float(0) if (value_json.data.result | length) > 0 else 0 }}"
+    unit_of_measurement: W
+    scan_interval: 60
+  - platform: rest
+    name: Victron AC Input Power L1
+    resource: http://prometheus:9090/api/v1/query?query=ac_input_power_l1%7Bjob%3D%22pushgateway%22%2Cexported_job%3D%22ruby-victron-scraper%22%2Clocation%3D%22hemlock%22%2Cdevice%3D%22victron%22%7D
+    value_template: "{{ (value_json.data.result | first).value[1] | float(0) if (value_json.data.result | length) > 0 else 0 }}"
+    unit_of_measurement: W
+    scan_interval: 60
+  - platform: rest
+    name: Victron AC Input Power L2
+    resource: http://prometheus:9090/api/v1/query?query=ac_input_power_l2%7Bjob%3D%22pushgateway%22%2Cexported_job%3D%22ruby-victron-scraper%22%2Clocation%3D%22hemlock%22%2Cdevice%3D%22victron%22%7D
+    value_template: "{{ (value_json.data.result | first).value[1] | float(0) if (value_json.data.result | length) > 0 else 0 }}"
+    unit_of_measurement: W
+    scan_interval: 60
+  - platform: rest
+    name: Victron String Power South
+    resource: http://prometheus:9090/api/v1/query?query=string_pv_power%7Bjob%3D%22pushgateway%22%2Cexported_job%3D%22ruby-victron-scraper%22%2Clocation%3D%22hemlock%22%2Cdevice%3D%22victron%22%2Cstring%3D%22south%22%7D
+    value_template: "{{ (value_json.data.result | first).value[1] | float(0) if (value_json.data.result | length) > 0 else 0 }}"
+    unit_of_measurement: W
+    scan_interval: 60
+  - platform: rest
+    name: Victron String Power West
+    resource: http://prometheus:9090/api/v1/query?query=string_pv_power%7Bjob%3D%22pushgateway%22%2Cexported_job%3D%22ruby-victron-scraper%22%2Clocation%3D%22hemlock%22%2Cdevice%3D%22victron%22%2Cstring%3D%22west%22%7D
+    value_template: "{{ (value_json.data.result | first).value[1] | float(0) if (value_json.data.result | length) > 0 else 0 }}"
+    unit_of_measurement: W
+    scan_interval: 60
