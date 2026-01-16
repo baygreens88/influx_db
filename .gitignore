@@ -8,6 +8,7 @@ mosquitto/log/
 vault/data/
 vault/file/
 vault/logs/
+vault/config/certs/vault.key
 vault-agent/creds/
 vault-agent/file/
 vault-agent/logs/
