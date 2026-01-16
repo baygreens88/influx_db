@@ -17,6 +17,30 @@ groups:
         annotations:
           summary: "Manual Mode Too Long"
           description: "Manual Mode for extended period, need to set to auto relay mode back soon"
+      - alert: MqttConsumerLostConnections
+        expr: 'mqtt_consumer_lost_connections{service_id="hem-wc-prod"} > 1'
+        for: 30m
+        labels:
+          severity: warning
+        annotations:
+          summary: "MQTT consumer lost connections"
+          description: "Lost connections > 1 for 30 minutes"
+      - alert: WaterLevelSensorMismatch
+        expr: 'mqtt_consumer_s1{service_id="hem-wc-prod"} == 1 and mqtt_consumer_s0{service_id="hem-wc-prod"} == 0'
+        for: 1m
+        labels:
+          severity: critical
+        annotations:
+          summary: "Water level sensor mismatch"
+          description: "S1 is high while S0 is low, possible sensor error"
+      - alert: PumpOnNoFlow
+        expr: 'mqtt_consumer_r0{service_id="hem-wc-prod"} == 1 and mqtt_consumer_minute_volume{service_id="hem-wc-prod"} < 0.5'
+        for: 2m
+        labels:
+          severity: critical
+        annotations:
+          summary: "Pump running without flow"
+          description: "Pump relay is on but minute volume is zero for over 2 minutes"
 
   - name: manual_trigger
     rules:
