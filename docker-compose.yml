@@ -53,6 +53,33 @@ services:
       - GF_SECURITY_ADMIN_PASSWORD=${GRAFANA_ADMIN_PASSWORD:?GRAFANA_ADMIN_PASSWORD is required}
     volumes:
       - grafana_data:/var/lib/grafana
+      - ./grafana/provisioning:/etc/grafana/provisioning:ro
+  
+  loki:
+    image: grafana/loki:3.5.2
+    container_name: loki
+    ports:
+      - "3100:3100"
+    volumes:
+      - ./loki/loki-config.yml:/etc/loki/loki-config.yml:ro
+      - loki_data:/loki
+    command:
+      - "-config.file=/etc/loki/loki-config.yml"
+    restart: unless-stopped
+
+  promtail:
+    image: grafana/promtail:3.5.2
+    container_name: promtail
+    volumes:
+      - ./promtail/promtail.yml:/etc/promtail/promtail.yml:ro
+      - /var/lib/docker/containers:/var/lib/docker/containers:ro
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - promtail_positions:/tmp/positions
+    command:
+      - "-config.file=/etc/promtail/promtail.yml"
+    depends_on:
+      - loki
+    restart: unless-stopped
 
   consul:
     image: consul:1.15.4
@@ -60,7 +87,7 @@ services:
     ports:
       - "8500:8500"     # HTTP API / UI
       - "8600:8600/udp" # DNS
-    command: agent -dev -client=0.0.0.0
+    command: agent -dev -client=0.0.0.0 -log-level=info
     volumes:
       - consul-data:/consul/data
 
@@ -87,6 +114,7 @@ services:
     volumes:
       - ./prometheus/prometheus.yml:/etc/prometheus/prometheus.yml:ro
       - ./prometheus/alerts.yml:/etc/prometheus/alerts.yml:ro
+      - ./vault/config/certs/vault.crt:/etc/prometheus/certs/vault.crt:ro
     restart: unless-stopped
 
   pushgateway:
@@ -196,6 +224,8 @@ services:
 volumes:
   influxdb2:
   grafana_data:
+  loki_data:
+  promtail_positions:
   consul-data:
   vault-agent-creds:
   vault-agent-token:
