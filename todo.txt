@@ -1,0 +1,1 @@
+need to protect rendered slack secrets from plain text in alertmanager

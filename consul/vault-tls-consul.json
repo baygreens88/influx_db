@@ -1,0 +1,11 @@
+{
+  "ID": "vault-taos-imac-local-tls",
+  "Name": "vault",
+  "Address": "taos-imac.local",
+  "Port": 8201,
+  "Check": {
+    "TCP": "taos-imac.local:8201",
+    "Interval": "10s",
+    "Timeout": "1s"
+  }
+}

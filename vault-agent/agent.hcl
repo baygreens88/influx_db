@@ -20,3 +20,9 @@ template {
   destination = "/out/victron.env"
   perms       = "0640"
 }
+
+template {
+  source      = "/vault/templates/alertmanager.yml.tmpl"
+  destination = "/out/alertmanager.yml"
+  perms       = "0644"
+}

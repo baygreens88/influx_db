@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.mqtt.victron.inverter.off.tao</string>
+    <key>ProgramArguments</key>
+    <array>
+        <string>/opt/homebrew/bin/mosquitto_pub</string>
+        <string>-h</string>
+        <string>192.168.5.179</string>
+        <string>-t</string>
+        <string>W/c0619ab27cf8/vebus/276/Mode</string>
+        <string>-m</string>
+        <string>{"value": 2}</string>
+    </array>
+    <key>StartCalendarInterval</key>
+    <dict>
+        <key>Hour</key>
+        <integer>14</integer> <!-- 2 PM is hour 14 in 24-hour format -->
+        <key>Minute</key>
+        <integer>36</integer>
+    </dict>
+    <key>RunAtLoad</key>
+    <false/> <!-- Prevents it from running immediately when loaded -->
+    <key>StandardOutPath</key>
+    <string>/tmp/mqtt.victron.inverter.off.log</string>
+    <key>StandardErrorPath</key>
+    <string>/tmp/mqtt.victron.inverter.off.err</string>
+</dict>
+</plist>

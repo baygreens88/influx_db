@@ -17,3 +17,14 @@ groups:
         annotations:
           summary: "Manual Mode Too Long"
           description: "Manual Mode for extended period, need to set to auto relay mode back soon"
+
+  - name: manual_trigger
+    rules:
+      - alert: ManualTestAlert
+        expr: manual_test_alert{job="manual_test_alert"} == 1
+        for: 10s
+        labels:
+          severity: info
+        annotations:
+          summary: "Manual test alert"
+          description: "Triggered via Pushgateway to verify Alertmanager routing"

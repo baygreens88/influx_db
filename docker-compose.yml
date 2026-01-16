@@ -74,7 +74,8 @@ services:
       - ./consul:/consul
     entrypoint: >
       sh -c "
-      curl --request PUT --data @/consul/mosquitto-consul.json http://consul:8500/v1/agent/service/register
+      curl --request PUT --data @/consul/mosquitto-consul.json http://consul:8500/v1/agent/service/register &&
+      curl --request PUT --data @/consul/vault-tls-consul.json http://consul:8500/v1/agent/service/register
       "
     restart: "no"
 
@@ -98,12 +99,15 @@ services:
   alertmanager:
     image: prom/alertmanager:latest
     container_name: alertmanager
+    restart: unless-stopped
     volumes:
-      - ./alertmanager:/etc/alertmanager
+      - vault-agent-output:/etc/alertmanager-rendered:ro
     command:
-      - "--config.file=/etc/alertmanager/alertmanager.yml"
+      - "--config.file=/etc/alertmanager-rendered/alertmanager.yml"
     ports:
       - "9093:9093"
+    depends_on:
+      - vault-agent
   
   node_exporter:
     image: prom/node-exporter
@@ -131,7 +135,7 @@ services:
       container_name: vault
       restart: unless-stopped
       ports:
-        - "8200:8200"
+        - "8201:8201"
       cap_add:
         - IPC_LOCK
       volumes:
@@ -144,10 +148,12 @@ services:
     container_name: vault-agent
     restart: unless-stopped
     environment:
-      VAULT_ADDR: "http://vault:8200"
+      VAULT_ADDR: "https://vault:8201"
+      VAULT_CACERT: "/vault/certs/vault.crt"
       ROLE_ID: "${SCRAPER_ROLE_ID:?SCRAPER_ROLE_ID is required}"
       SECRET_ID: "${SCRAPER_SECRET_ID:?SCRAPER_SECRET_ID is required}"
     volumes:
+      - ./vault/config/certs:/vault/certs:ro
       - ./vault-agent/agent.hcl:/vault/agent.hcl:ro
       - ./vault-agent/templates:/vault/templates:ro
       - vault-agent-token:/vault/token
