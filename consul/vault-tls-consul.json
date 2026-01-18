@@ -1,10 +1,11 @@
 {
   "ID": "vault-taos-imac-local-tls",
   "Name": "vault",
-  "Address": "taos-imac.local",
-  "Port": 8201,
+  "Address": "192.168.5.229",
+  "Port": 4317,
   "Check": {
-    "TCP": "taos-imac.local:8201",
+    "HTTP": "https://192.168.5.229:4317/v1/sys/health",
+    "TLSSkipVerify": true,
     "Interval": "10s",
     "Timeout": "1s"
   }

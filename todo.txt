@@ -1,1 +1,2 @@
-need to protect rendered slack secrets from plain text in alertmanager
+1. need to protect rendered slack secrets from plain text in alertmanager
+2. make telegraf more reliable, and debug when it stops sending mqtt data to prometheus

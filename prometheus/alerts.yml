@@ -41,7 +41,43 @@ groups:
         annotations:
           summary: "Pump running without flow"
           description: "Pump relay is on but minute volume is zero for over 2 minutes"
+  - name: telegraf_health
+    rules:
+      - alert: TelegrafDown
+        expr: 'up{job="telegraf_mqtt_data"} == 0'
+        for: 2m
+        labels:
+          severity: critical
+        annotations:
+          summary: "Telegraf scrape down"
+          description: "Prometheus cannot scrape Telegraf (job=telegraf_mqtt_data) for 2 minutes"
 
+  - name: consul_service_health
+    rules:
+      - alert: ConsulMetricsMissing
+        expr: 'absent(consul_health_service_status) == 1'
+        for: 1m
+        labels:
+          severity: critical
+        annotations:
+          summary: "Consul metrics missing"
+          description: "Consul health metrics are missing for more than 1 minute"
+      - alert: MqttServiceCritical
+        expr: 'consul_health_service_status{service_name="mqtt",status="critical"} == 1'
+        for: 1m
+        labels:
+          severity: critical
+        annotations:
+          summary: "MQTT service down"
+          description: "Consul reports mqtt service in critical state for over 1 minute"
+      - alert: VaultServiceCritical
+        expr: 'consul_health_service_status{service_name="vault",status="critical"} == 1'
+        for: 1m
+        labels:
+          severity: critical
+        annotations:
+          summary: "Vault service down"
+          description: "Consul reports vault service in critical state for over 1 minute"
   - name: manual_trigger
     rules:
       - alert: ManualTestAlert

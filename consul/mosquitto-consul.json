@@ -1,10 +1,10 @@
 {
   "ID": "mqtt-taos-imac-local",
   "Name": "mqtt",
-  "Address": "taos-imac.local",
+  "Address": "192.168.5.229",
   "Port": 8883,
   "Check": {
-    "TCP": "taos-imac.local:8883",
+    "TCP": "192.168.5.229:8883",
     "Interval": "10s",
     "Timeout": "1s"
   }
