@@ -1,0 +1,122 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: consul-config
+  labels:
+    app: consul
+data:
+  consul.hcl: |
+    telemetry {
+      prometheus_retention_time = "60s"
+    }
+  vault.json: |
+    {
+      "service": {
+        "name": "vault",
+        "address": "192.168.5.229",
+        "port": 4981,
+        "checks": [
+          {
+            "http": "https://vault:4981/v1/sys/health",
+            "tls_skip_verify": true,
+            "interval": "10s"
+          }
+        ]
+      }
+    }
+  mosquitto-mqtts.json: |
+    {
+      "service": {
+        "name": "mosquitto-mqtts",
+        "address": "192.168.5.229",
+        "port": 8883,
+        "checks": [
+          {
+            "tcp": "mosquitto-mqtts:8883",
+            "interval": "10s"
+          }
+        ]
+      }
+    }
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: consul-data
+  labels:
+    app: consul
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 1Gi
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: consul
+  labels:
+    app: consul
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: consul
+  template:
+    metadata:
+      labels:
+        app: consul
+    spec:
+      containers:
+        - name: consul
+          image: consul:1.15.4
+          env:
+            - name: CONSUL_DISABLE_PERM_MGMT
+              value: "1"
+          args:
+            - agent
+            - -dev
+            - -client=0.0.0.0
+            - -log-level=info
+            - -config-dir=/consul/config
+          ports:
+            - name: http
+              containerPort: 8500
+            - name: dns
+              containerPort: 8600
+              protocol: UDP
+          volumeMounts:
+            - name: config
+              mountPath: /consul/config
+              readOnly: true
+            - name: data
+              mountPath: /consul/data
+      volumes:
+        - name: config
+          configMap:
+            name: consul-config
+        - name: data
+          persistentVolumeClaim:
+            claimName: consul-data
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: consul
+  labels:
+    app: consul
+spec:
+  type: NodePort
+  selector:
+    app: consul
+  ports:
+    - name: http
+      port: 8500
+      targetPort: 8500
+      protocol: TCP
+      nodePort: 30850
+    - name: dns
+      port: 8600
+      targetPort: 8600
+      protocol: UDP

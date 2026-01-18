@@ -1,0 +1,1078 @@
+1768699197: mosquitto version 2.0.22 starting
+1768699197: Config loaded from /mosquitto/config/mosquitto.conf.
+1768699197: Warning: File /mosquitto/config/passwd has world readable permissions. Future versions will refuse to load this file.
+To fix this, use `chmod 0700 /mosquitto/config/passwd`.
+1768699197: Opening ipv4 listen socket on port 1883.
+1768699197: Opening ipv6 listen socket on port 1883.
+1768699197: Opening ipv4 listen socket on port 8883.
+1768699197: Opening ipv6 listen socket on port 8883.
+1768699197: mosquitto version 2.0.22 running
+1768699233: Client connection from 10.1.0.47 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768699243: Client connection from 10.1.0.47 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768699253: Client connection from 10.1.0.47 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768699263: Client connection from 10.1.0.47 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768699273: Client connection from 10.1.0.47 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768699283: Client connection from 10.1.0.47 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768699293: Client connection from 10.1.0.47 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768699303: Client connection from 10.1.0.47 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768699313: Client connection from 10.1.0.47 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768699323: Client connection from 10.1.0.47 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768699333: Client connection from 10.1.0.47 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768699343: Client connection from 10.1.0.47 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768699353: Client connection from 10.1.0.47 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768699363: Client connection from 10.1.0.47 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768699376: Client connection from 10.1.0.48 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768699386: Client connection from 10.1.0.48 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768699396: Client connection from 10.1.0.48 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768699406: Client connection from 10.1.0.48 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768699416: Client connection from 10.1.0.48 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768699426: Client connection from 10.1.0.48 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768699436: Client connection from 10.1.0.48 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768699446: Client connection from 10.1.0.48 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768699456: Client connection from 10.1.0.48 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768699466: Client connection from 10.1.0.48 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768699476: Client connection from 10.1.0.48 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768699486: Client connection from 10.1.0.48 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768699496: Client connection from 10.1.0.48 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768699506: Client connection from 10.1.0.48 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768699516: Client connection from 10.1.0.48 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768699526: Client connection from 10.1.0.48 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768699536: Client connection from 10.1.0.48 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768699546: Client connection from 10.1.0.48 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768699556: Client connection from 10.1.0.48 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768699566: Client connection from 10.1.0.48 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768699576: Client connection from 10.1.0.48 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768699586: Client connection from 10.1.0.48 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768699596: Client connection from 10.1.0.48 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768699606: Client connection from 10.1.0.48 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768699616: Client connection from 10.1.0.48 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768699626: Client connection from 10.1.0.48 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768699636: Client connection from 10.1.0.48 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768699646: Client connection from 10.1.0.48 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768699656: Client connection from 10.1.0.48 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768699666: Client connection from 10.1.0.48 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768699676: Client connection from 10.1.0.48 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768699686: Client connection from 10.1.0.48 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768699696: Client connection from 10.1.0.48 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768699706: Client connection from 10.1.0.48 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768699716: Client connection from 10.1.0.48 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768699723: Client connection from 10.1.0.49 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768699733: Client connection from 10.1.0.49 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768699743: Client connection from 10.1.0.49 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768699753: Client connection from 10.1.0.49 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768699763: Client connection from 10.1.0.49 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768699773: Client connection from 10.1.0.49 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768699783: Client connection from 10.1.0.49 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768699793: Client connection from 10.1.0.49 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768699803: Client connection from 10.1.0.49 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768699813: Client connection from 10.1.0.49 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768699823: New connection from 10.1.0.49:60928 on port 8883.
+1768699823: OpenSSL Error[0]: error:0A000126:SSL routines::unexpected eof while reading
+1768699823: Client <unknown> disconnected: Protocol error.
+1768699833: Client connection from 10.1.0.49 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768699843: Client connection from 10.1.0.49 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768699853: Client connection from 10.1.0.49 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768699863: Client connection from 10.1.0.49 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768699873: Client connection from 10.1.0.49 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768699883: Client connection from 10.1.0.49 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768699893: Client connection from 10.1.0.49 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768699903: Client connection from 10.1.0.49 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768699913: Client connection from 10.1.0.49 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768699923: Client connection from 10.1.0.49 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768699933: Client connection from 10.1.0.49 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768699943: Client connection from 10.1.0.49 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768699953: Client connection from 10.1.0.49 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768699963: Client connection from 10.1.0.49 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768699973: Client connection from 10.1.0.49 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768699983: Client connection from 10.1.0.49 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768699993: Client connection from 10.1.0.49 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768700003: Client connection from 10.1.0.49 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768700013: Client connection from 10.1.0.49 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768700023: Client connection from 10.1.0.49 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768700033: Client connection from 10.1.0.49 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768700043: Client connection from 10.1.0.49 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768700053: Client connection from 10.1.0.49 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768700063: Client connection from 10.1.0.49 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768700073: Client connection from 10.1.0.49 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768700083: Client connection from 10.1.0.49 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768700093: Client connection from 10.1.0.49 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768700103: Client connection from 10.1.0.49 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768700113: Client connection from 10.1.0.49 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768700123: Client connection from 10.1.0.49 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768700133: Client connection from 10.1.0.49 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768700143: Client connection from 10.1.0.49 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768700153: Client connection from 10.1.0.49 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768700163: Client connection from 10.1.0.49 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768700173: Client connection from 10.1.0.49 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768700183: Client connection from 10.1.0.49 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768700193: Client connection from 10.1.0.49 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768700203: Client connection from 10.1.0.49 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768700213: Client connection from 10.1.0.49 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768700223: Client connection from 10.1.0.49 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768700233: Client connection from 10.1.0.49 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768700243: Client connection from 10.1.0.49 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768700253: Client connection from 10.1.0.49 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768700263: Client connection from 10.1.0.49 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768700273: Client connection from 10.1.0.49 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768700283: Client connection from 10.1.0.49 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768700293: Client connection from 10.1.0.49 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768700303: Client connection from 10.1.0.49 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768700313: Client connection from 10.1.0.49 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768700323: Client connection from 10.1.0.49 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768700333: Client connection from 10.1.0.49 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768700343: Client connection from 10.1.0.49 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768700353: Client connection from 10.1.0.49 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768700363: Client connection from 10.1.0.49 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768700373: Client connection from 10.1.0.49 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768700383: Client connection from 10.1.0.49 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768700385: mosquitto version 2.0.22 terminating
+1768700385: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1768700404: mosquitto version 2.0.22 starting
+1768700404: Config loaded from /mosquitto/config/mosquitto.conf.
+1768700404: Warning: File /mosquitto/config/passwd has world readable permissions. Future versions will refuse to load this file.
+To fix this, use `chmod 0700 /mosquitto/config/passwd`.
+1768700404: Opening ipv4 listen socket on port 1883.
+1768700404: Opening ipv6 listen socket on port 1883.
+1768700404: Opening ipv4 listen socket on port 8883.
+1768700404: Opening ipv6 listen socket on port 8883.
+1768700404: mosquitto version 2.0.22 running
+1768700413: Client connection from 10.1.0.49 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768700423: Client connection from 10.1.0.49 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768700433: Client connection from 10.1.0.49 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768700443: Client connection from 10.1.0.49 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768700453: Client connection from 10.1.0.49 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768700463: Client connection from 10.1.0.49 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768700473: Client connection from 10.1.0.49 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768700483: New connection from 10.1.0.49:54076 on port 8883.
+1768700483: OpenSSL Error[0]: error:0A000126:SSL routines::unexpected eof while reading
+1768700483: Client <unknown> disconnected: Protocol error.
+1768700493: Client connection from 10.1.0.49 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768700503: Client connection from 10.1.0.49 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768700513: Client connection from 10.1.0.49 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768700523: Client connection from 10.1.0.49 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768700533: Client connection from 10.1.0.49 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768700543: Client connection from 10.1.0.49 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768700553: Client connection from 10.1.0.49 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768700563: Client connection from 10.1.0.49 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768700573: Client connection from 10.1.0.49 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768700583: Client connection from 10.1.0.49 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768700593: Client connection from 10.1.0.49 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768700597: New connection from 192.168.65.3:62190 on port 8883.
+1768700598: New client connected from 192.168.65.3:62190 as River_687a (p2, c1, k15, u'iot_user').
+1768700598: New connection from 192.168.65.3:62192 on port 8883.
+1768700598: OpenSSL Error[0]: error:0A000126:SSL routines::unexpected eof while reading
+1768700598: Client <unknown> disconnected: Protocol error.
+1768700603: Client connection from 10.1.0.49 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768700613: Client connection from 10.1.0.49 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768700615: New connection from 192.168.65.3:63470 on port 8883.
+1768700615: New client connected from 192.168.65.3:63470 as iphone (p2, c1, k300, u'iot_user').
+1768700619: OpenSSL Error[0]: error:0A000126:SSL routines::unexpected eof while reading
+1768700619: Client iphone closed its connection.
+1768700623: Client connection from 10.1.0.49 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768700633: Client connection from 10.1.0.49 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768700643: Client connection from 10.1.0.49 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768700653: Client connection from 10.1.0.49 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768700663: Client connection from 10.1.0.49 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768700673: Client connection from 10.1.0.49 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768700683: Client connection from 10.1.0.49 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768700693: Client connection from 10.1.0.49 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768700703: Client connection from 10.1.0.49 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768700713: Client connection from 10.1.0.49 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768700723: Client connection from 10.1.0.49 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768700733: Client connection from 10.1.0.49 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768700743: Client connection from 10.1.0.49 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768700753: Client connection from 10.1.0.49 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768700763: Client connection from 10.1.0.49 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768700773: Client connection from 10.1.0.49 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768700783: Client connection from 10.1.0.49 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768700793: Client connection from 10.1.0.49 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768700803: Client connection from 10.1.0.49 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768700813: Client connection from 10.1.0.49 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768700823: Client connection from 10.1.0.49 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768700829: New connection from 192.168.65.3:62198 on port 8883.
+1768700829: New client connected from 192.168.65.3:62198 as iphone (p2, c1, k300, u'iot_user').
+1768700833: Client connection from 10.1.0.49 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768700843: Client connection from 10.1.0.49 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768700852: OpenSSL Error[0]: error:0A000126:SSL routines::unexpected eof while reading
+1768700852: Client iphone closed its connection.
+1768700853: Client connection from 10.1.0.49 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768700863: Client connection from 10.1.0.49 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768700873: Client connection from 10.1.0.49 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768700883: Client connection from 10.1.0.49 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768700886: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768700888: New connection from 192.168.65.3:62330 on port 8883.
+1768700888: New client connected from 192.168.65.3:62330 as iphone (p2, c1, k300, u'iot_user').
+1768700896: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768700899: OpenSSL Error[0]: error:0A000126:SSL routines::unexpected eof while reading
+1768700899: Client iphone closed its connection.
+1768700906: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768700916: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768700922: New connection from 192.168.65.3:56364 on port 8883.
+1768700922: New client connected from 192.168.65.3:56364 as iphone (p2, c1, k300, u'iot_user').
+1768700926: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768700936: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768700946: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768700954: OpenSSL Error[0]: error:0A000126:SSL routines::unexpected eof while reading
+1768700954: Client iphone closed its connection.
+1768700956: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768700966: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768700976: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768700986: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768700996: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768701006: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768701016: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768701026: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768701036: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768701046: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768701056: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768701066: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768701076: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768701086: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768701096: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768701106: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768701116: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768701126: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768701136: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768701146: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768701156: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768701166: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768701176: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768701186: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768701196: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768701206: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768701216: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768701226: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768701236: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768701246: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768701256: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768701266: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768701276: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768701286: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768701296: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768701306: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768701316: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768701326: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768701336: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768701346: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768701356: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768701366: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768701376: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768701386: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768701396: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768701406: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768701416: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768701426: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768701436: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768701446: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768701456: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768701466: OpenSSL Error[0]: error:0A000126:SSL routines::unexpected eof while reading
+1768701466: Client River_687a closed its connection.
+1768701466: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768701471: New connection from 192.168.65.3:64922 on port 8883.
+1768701471: OpenSSL Error[0]: error:0A000126:SSL routines::unexpected eof while reading
+1768701471: Client <unknown> disconnected: Protocol error.
+1768701471: New connection from 192.168.65.3:55512 on port 8883.
+1768701472: New client connected from 192.168.65.3:55512 as River_687a (p2, c1, k15, u'iot_user').
+1768701476: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768701486: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768701496: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768701506: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768701516: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768701526: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768701536: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768701546: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768701556: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768701566: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768701576: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768701586: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768701596: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768701606: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768701616: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768701626: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768701636: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768701646: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768701656: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768701666: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768701676: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768701686: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768701696: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768701706: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768701716: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768701720: OpenSSL Error[0]: error:0A000126:SSL routines::unexpected eof while reading
+1768701720: Client River_687a closed its connection.
+1768701724: New connection from 192.168.65.3:65514 on port 8883.
+1768701725: New client connected from 192.168.65.3:65514 as River_687a (p2, c1, k15, u'iot_user').
+1768701726: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768701736: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768701746: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768701756: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768701766: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768701776: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768701786: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768701796: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768701806: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768701816: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768701826: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768701836: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768701846: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768701856: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768701866: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768701876: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768701886: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768701896: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768701906: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768701916: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768701926: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768701936: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768701946: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768701956: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768701966: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768701976: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768701986: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768701996: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768702006: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768702016: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768702026: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768702036: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768702046: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768702056: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768702066: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768702076: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768702086: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768702096: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768702106: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768702116: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768702126: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768702136: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768702146: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768702157: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768702167: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768702177: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768702187: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768702197: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768702204: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1768702207: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768702217: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768702227: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768702237: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768702247: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768702257: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768702267: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768702277: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768702287: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768702297: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768702307: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768702317: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768702327: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768702337: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768702347: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768702357: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768702367: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768702377: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768702387: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768702397: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768702407: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768702417: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768702427: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768702437: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768702447: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768702457: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768702467: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768702477: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768702487: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768702497: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768702507: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768702517: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768702527: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768702537: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768702547: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768702557: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768702567: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768702577: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768702587: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768702597: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768702607: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768702617: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768702627: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768702637: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768702647: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768702657: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768702667: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768702677: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768702687: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768702697: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768702707: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768702717: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768702727: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768702737: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768702747: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768702757: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768702767: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768702777: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768702787: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768702797: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768702807: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768702817: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768702827: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768702837: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768702847: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768702857: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768702867: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768702877: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768702887: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768702897: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768702907: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768702917: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768702927: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768702937: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768702947: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768702957: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768702967: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768702977: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768702987: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768702997: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768703007: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768703017: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768703027: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768703037: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768703047: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768703057: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768703067: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768703077: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768703087: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768703097: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768703107: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768703117: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768703127: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768703137: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768703147: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768703157: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768703167: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768703177: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768703187: New connection from 10.1.0.53:52156 on port 8883.
+1768703187: OpenSSL Error[0]: error:0A000126:SSL routines::unexpected eof while reading
+1768703187: Client <unknown> disconnected: Protocol error.
+1768703197: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768703207: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768703217: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768703227: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768703237: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768703247: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768703257: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768703267: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768703277: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768703287: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768703297: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768703307: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768703317: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768703327: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768703337: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768703347: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768703357: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768703367: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768703377: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768703387: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768703397: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768703407: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768703417: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768703427: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768703437: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768703447: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768703457: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768703467: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768703477: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768703487: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768703497: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768703507: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768703517: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768703527: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768703537: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768703547: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768703557: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768703567: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768703577: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768703587: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768703597: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768703607: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768703617: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768703627: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768703637: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768703647: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768703657: New connection from 10.1.0.53:50834 on port 8883.
+1768703657: OpenSSL Error[0]: error:0A000126:SSL routines::unexpected eof while reading
+1768703657: Client <unknown> disconnected: Protocol error.
+1768703667: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768703677: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768703687: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768703697: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768703707: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768703717: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768703727: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768703737: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768703747: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768703757: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768703767: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768703777: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768703787: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768703797: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768703807: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768703817: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768703827: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768703837: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768703847: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768703857: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768703867: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768703877: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768703887: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768703897: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768703907: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768703917: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768703927: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768703937: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768703947: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768703957: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768703967: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768703977: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768703987: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768703997: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768704005: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1768704007: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768704017: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768704027: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768704037: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768704047: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768704057: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768704067: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768704077: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768704087: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768704097: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768704107: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768704117: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768704127: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768704137: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768704147: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768704157: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768704167: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768704177: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768704188: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768704198: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768704208: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768704218: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768704228: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768704238: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768704248: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768704258: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768704268: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768704278: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768704288: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768704298: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768704308: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768704318: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768704328: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768704338: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768704348: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768704358: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768704368: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768704378: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768704388: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768704398: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768704408: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768704418: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768704428: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768704438: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768704448: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768704458: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768704468: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768704478: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768704488: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768704498: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768704508: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768704518: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768704528: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768704538: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768704548: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768704558: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768704568: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768704578: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768704588: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768704598: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768704608: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768704618: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768704628: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768704638: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768704648: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768704658: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768704668: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768704678: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768704688: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768704698: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768704708: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768704718: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768704728: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768704738: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768704748: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768704758: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768704768: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768704778: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768704788: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768704798: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768704808: New connection from 10.1.0.53:46138 on port 8883.
+1768704808: OpenSSL Error[0]: error:0A000126:SSL routines::unexpected eof while reading
+1768704808: Client <unknown> disconnected: Protocol error.
+1768704818: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768704828: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768704838: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768704848: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768704858: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768704868: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768704878: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768704888: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768704898: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768704908: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768704918: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768704928: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768704938: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768704948: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768704958: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768704968: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768704978: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768704988: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768704998: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768705008: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768705018: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768705028: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768705038: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768705048: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768705058: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768705068: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768705078: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768705088: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768705098: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768705108: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768705118: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768705128: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768705138: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768705148: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768705158: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768705168: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768705178: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768705188: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768705198: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768705208: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768705218: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768705228: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768705238: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768705248: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768705258: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768705268: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768705278: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768705288: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768705298: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768705308: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768705318: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768705328: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768705338: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768705348: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768705358: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768705368: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768705378: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768705388: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768705398: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768705408: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768705418: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768705428: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768705438: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768705448: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768705458: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768705468: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768705478: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768705488: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768705498: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768705508: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768705518: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768705528: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768705538: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768705548: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768705558: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768705568: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768705578: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768705588: New connection from 10.1.0.53:38414 on port 8883.
+1768705588: OpenSSL Error[0]: error:0A000126:SSL routines::unexpected eof while reading
+1768705588: Client <unknown> disconnected: Protocol error.
+1768705598: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768705608: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768705618: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768705628: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768705638: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768705648: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768705658: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768705668: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768705678: New connection from 10.1.0.53:60066 on port 8883.
+1768705678: OpenSSL Error[0]: error:0A000126:SSL routines::unexpected eof while reading
+1768705678: Client <unknown> disconnected: Protocol error.
+1768705688: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768705698: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768705708: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768705718: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768705728: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768705738: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768705748: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768705758: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768705768: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768705778: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768705788: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768705798: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768705806: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1768705808: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768705818: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768705828: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768705838: New connection from 10.1.0.53:58986 on port 8883.
+1768705838: OpenSSL Error[0]: error:0A000126:SSL routines::unexpected eof while reading
+1768705838: Client <unknown> disconnected: Protocol error.
+1768705848: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768705858: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768705868: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768705878: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768705888: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768705898: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768705908: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768705918: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768705928: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768705938: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768705948: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768705958: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768705968: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768705978: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768705988: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768705996: New connection from 10.1.0.77:43962 on port 8883.
+1768705996: New client connected from 10.1.0.77:43962 as Telegraf-Consumer-ES6yR (p2, c1, k60, u'iot_user').
+1768705996: New connection from 10.1.0.77:43972 on port 8883.
+1768705996: New client connected from 10.1.0.77:43972 as Telegraf-Consumer-PvlHs (p2, c1, k60, u'iot_user').
+1768705998: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768706008: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768706018: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768706028: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768706038: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768706048: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768706058: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768706068: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768706078: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768706088: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768706098: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768706108: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768706118: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768706128: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768706138: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768706148: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768706158: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768706168: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768706178: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768706188: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768706198: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768706206: New connection from 192.168.65.3:61822 on port 8883.
+1768706206: New client connected from 192.168.65.3:61822 as iphone (p2, c1, k300, u'iot_user').
+1768706208: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768706218: OpenSSL Error[0]: error:0A000126:SSL routines::unexpected eof while reading
+1768706218: Client iphone closed its connection.
+1768706218: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768706228: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768706238: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768706249: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768706259: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768706269: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768706279: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768706289: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768706299: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768706309: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768706319: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768706321: OpenSSL Error[0]: error:0A000126:SSL routines::unexpected eof while reading
+1768706321: Client River_687a closed its connection.
+1768706329: New connection from 10.1.0.53:41362 on port 8883.
+1768706329: OpenSSL Error[0]: error:0A000126:SSL routines::unexpected eof while reading
+1768706329: Client <unknown> disconnected: Protocol error.
+1768706339: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768706340: New connection from 192.168.65.3:59076 on port 8883.
+1768706340: New client connected from 192.168.65.3:59076 as River_687a (p2, c1, k15, u'iot_user').
+1768706349: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768706359: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768706369: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768706379: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768706389: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768706399: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768706409: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768706419: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768706429: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768706439: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768706449: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768706459: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768706469: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768706479: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768706489: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768706499: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768706509: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768706519: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768706529: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768706539: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768706549: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768706559: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768706569: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768706579: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768706589: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768706599: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768706609: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768706619: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768706620: Client River_687a has exceeded timeout, disconnecting.
+1768706628: New connection from 192.168.65.3:63068 on port 8883.
+1768706629: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768706630: New client connected from 192.168.65.3:63068 as River_687a (p2, c1, k15, u'iot_user').
+1768706639: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768706649: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768706659: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768706669: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768706679: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768706689: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768706699: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768706709: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768706719: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768706729: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768706739: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768706749: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768706759: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768706769: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768706779: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768706785: New connection from 192.168.65.3:55544 on port 8883.
+1768706785: New client connected from 192.168.65.3:55544 as iphone (p2, c1, k300, u'iot_user').
+1768706789: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768706790: Client River_687a has exceeded timeout, disconnecting.
+1768706799: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768706802: New connection from 192.168.65.3:56514 on port 8883.
+1768706809: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768706809: New client connected from 192.168.65.3:56514 as River_687a (p2, c1, k15, u'iot_user').
+1768706818: OpenSSL Error[0]: error:0A000126:SSL routines::unexpected eof while reading
+1768706818: Client iphone closed its connection.
+1768706819: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768706829: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768706839: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768706849: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768706859: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768706863: Client River_687a has exceeded timeout, disconnecting.
+1768706869: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768706877: New connection from 192.168.65.3:59732 on port 8883.
+1768706879: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768706889: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768706899: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768706909: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768706919: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768706929: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768706939: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768706949: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768706959: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768706967: Client <unknown> has exceeded timeout, disconnecting.
+1768706969: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768706979: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768706989: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768706999: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768707009: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768707019: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768707029: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768707039: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768707049: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768707059: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768707069: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768707079: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768707089: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768707099: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768707109: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768707119: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768707129: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768707139: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768707149: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768707159: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768707169: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768707179: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768707189: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768707199: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768707209: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768707219: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768707229: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768707239: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768707249: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768707259: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768707269: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768707279: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768707289: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768707299: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768707309: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768707319: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768707329: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768707339: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768707347: New connection from 192.168.65.3:62844 on port 8883.
+1768707348: New client connected from 192.168.65.3:62844 as iphone (p2, c1, k300, u'iot_user').
+1768707349: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768707356: OpenSSL Error[0]: error:0A000126:SSL routines::unexpected eof while reading
+1768707356: Client iphone closed its connection.
+1768707359: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768707369: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768707379: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768707389: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768707399: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768707409: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768707413: New connection from 192.168.65.3:63396 on port 8883.
+1768707413: New client connected from 192.168.65.3:63396 as River_687a (p2, c1, k15, u'iot_user').
+1768707419: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768707429: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768707439: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768707449: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768707459: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768707469: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768707479: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768707489: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768707499: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768707509: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768707519: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768707529: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768707539: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768707549: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768707559: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768707569: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768707579: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768707589: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768707599: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768707607: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1768707609: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768707619: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768707629: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768707639: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768707649: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768707659: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768707669: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768707679: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768707689: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768707699: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768707709: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768707719: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768707729: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768707739: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768707749: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768707759: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768707769: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768707779: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768707789: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768707800: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768707810: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768707820: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768707829: OpenSSL Error[0]: error:0A000126:SSL routines::unexpected eof while reading
+1768707829: Client River_687a closed its connection.
+1768707830: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768707833: New connection from 192.168.65.3:56770 on port 8883.
+1768707834: New client connected from 192.168.65.3:56770 as River_687a (p2, c1, k15, u'iot_user').
+1768707840: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768707850: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768707860: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768707870: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768707880: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768707890: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768707900: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768707910: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768707920: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768707930: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768707940: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768707950: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768707960: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768707970: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768707980: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768707990: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768708000: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768708010: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768708020: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768708030: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768708040: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768708050: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768708060: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768708070: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768708080: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768708088: New connection from 192.168.65.3:57000 on port 8883.
+1768708088: New client connected from 192.168.65.3:57000 as iphone (p2, c1, k300, u'iot_user').
+1768708090: New connection from 10.1.0.53:57886 on port 8883.
+1768708090: OpenSSL Error[0]: error:0A000126:SSL routines::unexpected eof while reading
+1768708090: Client <unknown> disconnected: Protocol error.
+1768708100: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768708103: OpenSSL Error[0]: error:0A000126:SSL routines::unexpected eof while reading
+1768708103: Client iphone closed its connection.
+1768708110: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768708120: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768708130: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768708140: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768708150: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768708160: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768708170: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768708180: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768708190: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768708201: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768708211: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768708221: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768708231: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768708241: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768708251: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768708261: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768708271: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768708281: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768708291: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768708301: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768708311: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768708321: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768708331: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768708341: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768708351: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768708361: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768708371: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768708381: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768708391: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768708401: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768708411: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768708421: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768708431: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768708441: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768708451: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768708461: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768708471: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768708481: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768708491: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768708501: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768708511: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768708521: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768708531: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768708541: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768708551: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768708561: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768708571: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768708581: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768708591: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768708601: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768708611: New connection from 10.1.0.94:57768 on port 1883.
+1768708611: New client connected from 10.1.0.94:57768 as auto-1B781D7B-D21B-408E-D3C2-5D02A9E7C754 (p2, c1, k30, u'iot_user').
+1768708611: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768708621: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768708631: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768708642: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768708652: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768708662: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768708672: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768708682: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768708692: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768708702: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768708712: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768708722: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768708732: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768708742: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768708752: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768708762: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768708772: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768708782: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768708792: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768708802: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768708812: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768708822: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768708832: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768708842: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1768708852: Client connection from 10.1.0.53 failed: error:0A000126:SSL routines::unexpected eof while reading.

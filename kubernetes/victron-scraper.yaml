@@ -1,0 +1,106 @@
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: victron-scraper
+  labels:
+    app: victron-scraper
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: victron-vault-agent
+  labels:
+    app: victron-scraper
+data:
+  agent.hcl: |
+    pid_file = "/tmp/vault-agent.pid"
+
+    auto_auth {
+      method "kubernetes" {
+        mount_path = "auth/kubernetes"
+        config = {
+          role = "victron-scraper"
+        }
+      }
+
+      sink "file" {
+        config = {
+          path = "/vault/token/vault-token"
+        }
+      }
+    }
+
+    template {
+      source      = "/vault/templates/victron.env.tmpl"
+      destination = "/out/victron.env"
+      perms       = "0640"
+    }
+  victron.env.tmpl: |
+    VICTRON_API_KEY={{ with secret "kv/data/victron/hemlock" }}{{ .Data.data.token }}{{ end }}
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: victron-scraper
+  labels:
+    app: victron-scraper
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: victron-scraper
+  template:
+    metadata:
+      labels:
+        app: victron-scraper
+    spec:
+      serviceAccountName: victron-scraper
+      containers:
+        - name: victron-scraper
+          image: influx_db-victron-scraper:latest
+          imagePullPolicy: IfNotPresent
+          env:
+            - name: PUSHGATEWAY_URL
+              value: http://pushgateway:9091
+          volumeMounts:
+            - name: shared-out
+              mountPath: /out
+        - name: vault-agent
+          image: hashicorp/vault:1.21
+          imagePullPolicy: IfNotPresent
+          args:
+            - agent
+            - -config=/vault/agent.hcl
+          env:
+            - name: VAULT_ADDR
+              value: https://vault:4981
+            - name: VAULT_CACERT
+              value: /vault/certs/vault.crt
+          volumeMounts:
+            - name: vault-agent-config
+              mountPath: /vault/agent.hcl
+              subPath: agent.hcl
+              readOnly: true
+            - name: vault-agent-config
+              mountPath: /vault/templates/victron.env.tmpl
+              subPath: victron.env.tmpl
+              readOnly: true
+            - name: vault-ca
+              mountPath: /vault/certs/vault.crt
+              subPath: vault.crt
+              readOnly: true
+            - name: vault-token
+              mountPath: /vault/token
+            - name: shared-out
+              mountPath: /out
+      volumes:
+        - name: vault-agent-config
+          configMap:
+            name: victron-vault-agent
+        - name: vault-ca
+          secret:
+            secretName: vault-ca
+        - name: vault-token
+          emptyDir: {}
+        - name: shared-out
+          emptyDir: {}

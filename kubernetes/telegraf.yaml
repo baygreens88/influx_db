@@ -1,0 +1,65 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: telegraf
+  labels:
+    app: telegraf
+spec:
+  selector:
+    app: telegraf
+  ports:
+    - name: metrics
+      port: 9273
+      targetPort: 9273
+      protocol: TCP
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: telegraf
+  labels:
+    app: telegraf
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: telegraf
+  template:
+    metadata:
+      labels:
+        app: telegraf
+    spec:
+      serviceAccountName: telegraf
+      containers:
+        - name: telegraf
+          image: telegraf:latest
+          ports:
+            - containerPort: 9273
+              name: metrics
+          env:
+            - name: TELEGRAF_MQTT_USER
+              valueFrom:
+                secretKeyRef:
+                  name: telegraf-mqtt
+                  key: username
+            - name: TELEGRAF_MQTT_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: telegraf-mqtt
+                  key: password
+          volumeMounts:
+            - name: config
+              mountPath: /etc/telegraf/telegraf.conf
+              readOnly: true
+            - name: ca-cert
+              mountPath: /etc/telegraf/ca.crt
+              readOnly: true
+      volumes:
+        - name: config
+          hostPath:
+            path: /Users/taolong/Workspaces/influx_db/kubernetes/telegraf/telegraf.conf
+            type: File
+        - name: ca-cert
+          hostPath:
+            path: /Users/taolong/Workspaces/influx_db/kubernetes/mosquitto/certs/ca.crt
+            type: File
