@@ -32,7 +32,7 @@ services:
       - influxdb
       - mosquitto
     volumes:
-      - ./telegraf.conf:/etc/telegraf/telegraf.conf:ro
+      - ./telegraf/telegraf.conf:/etc/telegraf/telegraf.conf:ro
       - ./mosquitto/certs/ca.crt:/etc/telegraf/ca.crt:ro
     environment:
       - HOST_PROC=/host/proc
@@ -87,24 +87,19 @@ services:
     ports:
       - "8500:8500"     # HTTP API / UI
       - "8600:8600/udp" # DNS
-    command: agent -dev -client=0.0.0.0 -log-level=info
+    command: agent -dev -client=0.0.0.0 -log-level=info -config-file=/consul/config/consul.hcl
     volumes:
+      - ./consul/consul.hcl:/consul/config/consul.hcl:ro
       - consul-data:/consul/data
 
-  mqtt-register:
-    image: curlimages/curl:latest
-    container_name: mqtt-register
+  consul-exporter:
+    image: prom/consul-exporter
+    container_name: consul-exporter
+    command:
+      - "--consul.server=consul:8500"
     depends_on:
-      - mosquitto
       - consul
-    volumes:
-      - ./consul:/consul
-    entrypoint: >
-      sh -c "
-      curl --request PUT --data @/consul/mosquitto-consul.json http://consul:8500/v1/agent/service/register &&
-      curl --request PUT --data @/consul/vault-tls-consul.json http://consul:8500/v1/agent/service/register
-      "
-    restart: "no"
+    restart: unless-stopped
 
   prometheus:
     image: prom/prometheus
@@ -163,7 +158,7 @@ services:
       container_name: vault
       restart: unless-stopped
       ports:
-        - "8201:8201"
+        - "4317:4317"
       cap_add:
         - IPC_LOCK
       volumes:
@@ -176,7 +171,7 @@ services:
     container_name: vault-agent
     restart: unless-stopped
     environment:
-      VAULT_ADDR: "https://vault:8201"
+      VAULT_ADDR: "https://vault:4317"
       VAULT_CACERT: "/vault/certs/vault.crt"
       ROLE_ID: "${SCRAPER_ROLE_ID:?SCRAPER_ROLE_ID is required}"
       SECRET_ID: "${SCRAPER_SECRET_ID:?SCRAPER_SECRET_ID is required}"
