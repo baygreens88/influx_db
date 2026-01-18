@@ -57,5 +57,5 @@ spec:
             type: Directory
         - name: data
           hostPath:
-            path: /Users/taolong/Workspaces/influx_db/kubernetes/vault/data
+            path: /Users/taolong/k8s_data/vault
             type: Directory

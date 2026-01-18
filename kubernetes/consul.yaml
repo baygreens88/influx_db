@@ -39,19 +39,6 @@ data:
       }
     }
 ---
-apiVersion: v1
-kind: PersistentVolumeClaim
-metadata:
-  name: consul-data
-  labels:
-    app: consul
-spec:
-  accessModes:
-    - ReadWriteOnce
-  resources:
-    requests:
-      storage: 1Gi
----
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -97,8 +84,9 @@ spec:
           configMap:
             name: consul-config
         - name: data
-          persistentVolumeClaim:
-            claimName: consul-data
+          hostPath:
+            path: /Users/taolong/k8s_data/consul/data
+            type: DirectoryOrCreate
 ---
 apiVersion: v1
 kind: Service

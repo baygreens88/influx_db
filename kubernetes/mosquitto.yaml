@@ -76,9 +76,9 @@ spec:
             type: Directory
         - name: data
           hostPath:
-            path: /Users/taolong/Workspaces/influx_db/kubernetes/mosquitto/data
+            path: /Users/taolong/k8s_data/mosquitto/data
             type: Directory
         - name: log
           hostPath:
-            path: /Users/taolong/Workspaces/influx_db/kubernetes/mosquitto/log
+            path: /Users/taolong/k8s_data/mosquitto/log
             type: Directory

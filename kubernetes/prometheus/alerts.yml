@@ -88,3 +88,13 @@ groups:
         annotations:
           summary: "Manual test alert"
           description: "Triggered via Pushgateway to verify Alertmanager routing"
+  - name: eg4_inverter
+    rules:
+      - alert: Eg4InverterOverloading
+        expr: 'l1_consumption{device="eg4-18k"} + l2_consumption{device="eg4-18k"} > 10000'
+        for: 1m
+        labels:
+          severity: critical
+        annotations:
+          summary: "EG4 inverter overloading"
+          description: "L1 + L2 consumption exceeds 1000W for over 1 minute"

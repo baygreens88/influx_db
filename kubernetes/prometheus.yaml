@@ -66,4 +66,6 @@ spec:
             path: /Users/taolong/Workspaces/influx_db/kubernetes/prometheus/certs/vault.crt
             type: File
         - name: data
-          emptyDir: {}
+          hostPath:
+            path: /Users/taolong/k8s_data/prometheus
+            type: DirectoryOrCreate

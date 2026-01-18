@@ -17,6 +17,7 @@ kubernetes/loki/data/
 kubernetes/**/log/
 kubernetes/**/logs/
 kubernetes/vault/data/
+kubernetes/**/data/
 .eg4.creds
 eg4.creds
 homeassistant/config/.HA_VERSION

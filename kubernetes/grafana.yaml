@@ -60,4 +60,6 @@ spec:
             path: /Users/taolong/Workspaces/influx_db/kubernetes/grafana/provisioning
             type: Directory
         - name: data
-          emptyDir: {}
+          hostPath:
+            path: /Users/taolong/k8s_data/grafana/grafana
+            type: DirectoryOrCreate
