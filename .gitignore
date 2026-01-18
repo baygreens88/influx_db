@@ -13,6 +13,7 @@ vault-agent/creds/
 vault-agent/file/
 vault-agent/logs/
 vault-agent/token/
+kubernetes/loki/data/
 .eg4.creds
 eg4.creds
 homeassistant/config/.HA_VERSION
