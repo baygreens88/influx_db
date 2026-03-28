@@ -1,18 +1,74 @@
 require 'prometheus/client'
 require 'prometheus/client/push'
 require 'selenium-webdriver'
-require 'prometheus/client'
+require 'open3'
 
-# Initialize the Chrome driver
-#driver = Selenium::WebDriver.for :remote, url: "http://localhost:63306", options: Selenium::WebDriver::Options.chrome
+def executable_major_version(path)
+  return nil if path.nil? || path.strip.empty? || !File.executable?(path)
 
-#run in headless mode
+  output, status = Open3.capture2e(path, '--version')
+  return nil unless status.success?
+
+  output[/(\d+)\./, 1]&.to_i
+rescue StandardError
+  nil
+end
+
+def existing_executable_paths(paths)
+  paths.select { |path| path && File.executable?(path) }
+end
+
+def resolve_local_browser_binaries(base_dir)
+  chrome_candidates = [
+    ENV['EG4_CHROME_BINARY'],
+    *Dir.glob(File.join(base_dir, 'chrome', 'mac_arm-*', 'chrome-mac-arm64', 'Google Chrome for Testing.app', 'Contents', 'MacOS', 'Google Chrome for Testing')).sort.reverse,
+    '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome'
+  ]
+
+  driver_candidates = [
+    ENV['EG4_CHROMEDRIVER_BINARY'],
+    *Dir.glob(File.join(base_dir, 'chromedriver', 'mac_arm-*', 'chromedriver-mac-arm64', 'chromedriver')).sort.reverse
+  ]
+
+  chrome_candidates = existing_executable_paths(chrome_candidates)
+  driver_candidates = existing_executable_paths(driver_candidates)
+  driver_versions = driver_candidates.to_h { |driver| [driver, executable_major_version(driver)] }
+
+  chrome_candidates.each do |chrome|
+    chrome_version = executable_major_version(chrome)
+    next if chrome_version.nil?
+
+    matched_driver = driver_candidates.find { |driver| driver_versions[driver] == chrome_version }
+    return [chrome, matched_driver] if matched_driver
+  end
+
+  [chrome_candidates.first, driver_candidates.first]
+end
+
+base_dir = __dir__
+chrome_binary, chromedriver_binary = resolve_local_browser_binaries(base_dir)
+if chrome_binary.nil? || chromedriver_binary.nil?
+  warn 'Could not find usable Chrome and chromedriver binaries. Set EG4_CHROME_BINARY and EG4_CHROMEDRIVER_BINARY.'
+  exit 1
+end
+
+remote_url = ENV['EG4_SELENIUM_REMOTE_URL']
+
+# run in headless mode
 options = Selenium::WebDriver::Options.chrome
+options.binary = chrome_binary
 options.add_argument('--headless=new')
 options.add_argument('--disable-gpu')
 options.add_argument('--no-sandbox')
 options.add_argument('--disable-dev-shm-usage')
-driver = Selenium::WebDriver.for :remote, url: "http://localhost:56311", options: options
+
+driver =
+  if remote_url && !remote_url.strip.empty?
+    Selenium::WebDriver.for :remote, url: remote_url, options: options
+  else
+    service = Selenium::WebDriver::Service.chrome(path: chromedriver_binary)
+    Selenium::WebDriver.for :chrome, options: options, service: service
+  end
 
 # Navigate to a website
 driver.navigate.to "https://monitor.eg4electronics.com/WManage/web/login"
@@ -70,8 +126,8 @@ pv3Power = driver.find_element(class: 'pv3PowerText').text.strip.to_i
 
 totalPVPower = pv1Power + pv2Power + pv3Power
 
-l1_consumption = driver.find_element(class: 'epsL1nText').text.strip.to_i
-l2_consumption = driver.find_element(class: 'epsL2nText').text.strip.to_i
+l1_consumption = Float(driver.find_element(class: 'epsL1nText').text.strip) rescue Float::NAN
+l2_consumption = Float(driver.find_element(class: 'epsL2nText').text.strip) rescue Float::NAN
 
 puts "PV1: ", pv1Power
 puts "PV2: ", pv2Power
@@ -81,8 +137,16 @@ puts "PV: ", totalPVPower
 puts "L1 consumption: ", l1_consumption
 puts "L2 consumption: ", l2_consumption
 
-soc = driver.find_element(class: 'socText').text.strip.to_i
+soc = Float(driver.find_element(class: 'socText').text.strip) rescue Float::NAN
 puts "soc: ", soc
+
+zero_or_nan = ->(value) { value.respond_to?(:nan?) ? value.nan? || value.zero? : value.to_f.nan? || value.to_f.zero? }
+
+if zero_or_nan.call(l1_consumption) && zero_or_nan.call(l2_consumption) && zero_or_nan.call(soc)
+  puts 'l1_consumption, l2_consumption, and soc are all zero or NaN; skipping pushgateway update'
+  driver.quit
+  exit 0
+end
 
 epsPower = driver.find_element(class: 'epsPowerText').text.strip.to_i
 puts "inverter: ", epsPower
