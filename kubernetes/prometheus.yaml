@@ -15,6 +15,204 @@ spec:
       protocol: TCP
       nodePort: 30900
 ---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: prometheus-config
+  labels:
+    app: prometheus
+data:
+  alerts.yml: |
+    groups:
+      - name: mqtt_sensors
+        rules:
+          - alert: WaterLevelHigh
+            expr: 'mqtt_consumer_s2{service_id="hem-wc-prod"} > 0'
+            for: 1m
+            labels:
+              severity: warning
+            annotations:
+              summary: "Water Level High"
+              description: "Water Level high for extended period"
+          - alert: ManualModeTooLong
+            expr: 'mqtt_consumer_relay_mode{service_id="hem-wc-prod"} < 1'
+            for: 1m
+            labels:
+              severity: warning
+            annotations:
+              summary: "Manual Mode Too Long"
+              description: "Manual Mode for extended period, need to set to auto relay mode back soon"
+          - alert: MqttConsumerLostConnections
+            expr: 'mqtt_consumer_lost_connections{service_id="hem-wc-prod"} > 1'
+            for: 30m
+            labels:
+              severity: warning
+            annotations:
+              summary: "MQTT consumer lost connections"
+              description: "Lost connections > 1 for 30 minutes"
+          - alert: WaterLevelSensorMismatch
+            expr: 'mqtt_consumer_s1{service_id="hem-wc-prod"} == 1 and mqtt_consumer_s0{service_id="hem-wc-prod"} == 0'
+            for: 1m
+            labels:
+              severity: critical
+            annotations:
+              summary: "Water level sensor mismatch"
+              description: "S1 is high while S0 is low, possible sensor error"
+          - alert: PumpOnNoFlow
+            expr: 'mqtt_consumer_r0{service_id="hem-wc-prod"} == 1 and mqtt_consumer_minute_volume{service_id="hem-wc-prod"} < 0.5'
+            for: 2m
+            labels:
+              severity: critical
+            annotations:
+              summary: "Pump running without flow"
+              description: "Pump relay is on but minute volume is zero for over 2 minutes"
+      - name: telegraf_health
+        rules:
+          - alert: TelegrafDown
+            expr: 'up{job="telegraf_mqtt_data"} == 0'
+            for: 2m
+            labels:
+              severity: critical
+            annotations:
+              summary: "Telegraf scrape down"
+              description: "Prometheus cannot scrape Telegraf (job=telegraf_mqtt_data) for 2 minutes"
+
+      - name: consul_service_health
+        rules:
+          - alert: ConsulMetricsMissing
+            expr: 'absent(consul_health_service_status) == 1'
+            for: 1m
+            labels:
+              severity: critical
+            annotations:
+              summary: "Consul metrics missing"
+              description: "Consul health metrics are missing for more than 1 minute"
+          - alert: MqttServiceCritical
+            expr: 'consul_health_service_status{service_name="mqtt",status="critical"} == 1'
+            for: 1m
+            labels:
+              severity: critical
+            annotations:
+              summary: "MQTT service down"
+              description: "Consul reports mqtt service in critical state for over 1 minute"
+          - alert: VaultServiceCritical
+            expr: 'consul_health_service_status{service_name="vault",status="critical"} == 1'
+            for: 1m
+            labels:
+              severity: critical
+            annotations:
+              summary: "Vault service down"
+              description: "Consul reports vault service in critical state for over 1 minute"
+      - name: manual_trigger
+        rules:
+          - alert: ManualTestAlert
+            expr: manual_test_alert{job="manual_test_alert"} == 1
+            for: 10s
+            labels:
+              severity: info
+            annotations:
+              summary: "Manual test alert"
+              description: "Triggered via Pushgateway to verify Alertmanager routing"
+      - name: eg4_inverter
+        rules:
+          - alert: Eg4InverterOverloading
+            expr: 'l1_consumption{device="eg4-18k"} + l2_consumption{device="eg4-18k"} > 10000'
+            for: 1m
+            labels:
+              severity: critical
+            annotations:
+              summary: "EG4 inverter overloading"
+              description: "L1 + L2 consumption exceeds 1000W for over 1 minute"
+  prometheus.yml: |
+    global:
+      scrape_interval: 15s
+
+    alerting:
+      alertmanagers:
+      - static_configs:
+        - targets:
+          - "alertmanager:9093"
+
+    scrape_configs:
+      - job_name: "prometheus"
+        static_configs:
+          - targets: ["localhost:9090"]
+
+      - job_name: "node"
+        static_configs:
+          - targets: ["node-exporter:9100"]
+
+      - job_name: "mosquitto"
+        static_configs:
+          - targets: ["mosquitto-exporter:9234"]
+
+      - job_name: "consul"
+        metrics_path: "/v1/agent/metrics"
+        params:
+          format: [prometheus]
+        static_configs:
+          - targets: ["consul:8500"]
+
+      - job_name: "consul-exporter"
+        static_configs:
+          - targets: ["consul-exporter:9107"]
+
+      - job_name: 'telegraf_mqtt_data'
+        static_configs:
+          - targets: ['telegraf:9273']
+
+      - job_name: 'pushgateway'
+        static_configs:
+          - targets: ['pushgateway:9091']
+
+    rule_files:
+      - "/etc/prometheus/alerts.yml"
+  vault.crt: |
+    -----BEGIN CERTIFICATE-----
+    MIIFKDCCAxCgAwIBAgIUdeo/jr4dnynbMF0iDt56Ar8tQpMwDQYJKoZIhvcNAQEL
+    BQAwGjEYMBYGA1UEAwwPdGFvcy1pbWFjLmxvY2FsMB4XDTI2MDExNTIzNDMyM1oX
+    DTI4MDQxOTIzNDMyM1owGjEYMBYGA1UEAwwPdGFvcy1pbWFjLmxvY2FsMIICIjAN
+    BgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEAuVQAfMqJo98BZcvaU3CXiL/L3+Vn
+    M+nNvDcWfd5zU8UMTo1EA4R5g40U4LD2JKjPHAcPKWKV9tCmGIxytVPpdxvAJz20
+    3ssE0lQMXNk9VBQuc+avynUVaGe9toqaIaSBdGnOyxP0qvtMUiZJ9FhraguNNDdn
+    jRB91IuUCmwkTmDjfm2GLBTEP2GeH+vGs8wsInc/9T73irq27QcHF/982cLlw0/0
+    m4JdnAFUIhnRY1gt6iXPrScTOvKyRCJYvXSYBDEFhkJMMnrXNPmJrITzdRKm20/4
+    FqeFrLK2HleyWR2yVycvUnWzOsQj2evyQrPf0s6KUuG548er+Kyy2JESj2kyi0Hz
+    pg/+DErLhqC1r8zhkNdZXRIlcQ4ta1y71IxaPO5TiYclA/6xMyO693HvavR3HawX
+    X9LQtpyjvZGycnI7I+DU5A6U8scRrpU3gZOsV9c6em3uLX56XkjccsXZtjZ29KF+
+    ndleAPFECEXDMmRrGMem/l5tPY5qZanZcSTJv+JBSUavb7no7/SVzt4iU0oCoTpd
+    ZITjgv59NzXikfnKNrhvOpHKhq5hA6goc4tRm8epkL3N/wLdvh7c1ESWxdS+vJns
+    pLMngaItIxOWPorAZkkzpX5pK3GsfGgYsi1ObxOmvQntsZFK7vt+itg4eM3hXK0Q
+    lkWSumsqRk/RbJMCAwEAAaNmMGQwIQYDVR0RBBowGIIPdGFvcy1pbWFjLmxvY2Fs
+    ggV2YXVsdDALBgNVHQ8EBAMCBLAwEwYDVR0lBAwwCgYIKwYBBQUHAwEwHQYDVR0O
+    BBYEFLcTO1g+JSUBIRDY2Orvw2GnuowZMA0GCSqGSIb3DQEBCwUAA4ICAQBaoG2s
+    M3p6H5Dj28lhPP3iifDy9uCGybNo8aYJegYNg7buPL6YNDm5EtaK20EyKpJVjjxQ
+    2F1kCN8rxWS3L9TbUmoujTVAlhdmX66BTgHi9hNb8Kcb7JqTlmgKb0vdKLC9balI
+    VA+BZOt9LpUY7fEBe95YMMSH0gGMwYbB12Fx8UtsqCBRNuM8HU4w8noiWbpPrLxk
+    /VQD2phrSXj/AgBcxbzYNZmKCPlFRMX7XoHL2YhAbKwLhgDA7LN2DDNy4VMVuAzg
+    8MlpzpCQQGkEv3yIeVH7cCbGAsNYxydaUe99qgaIZtbscHaOsOYJ3ZT2CLqOCXvJ
+    DZK0wbQs3IjFS2aXx6j/qtaRc8ftLBNFuYNdkPfe4nD6aZ5noegayjzjIa6HMqCr
+    mmwF57pFfjJd6LU2BNhRQ97crOnKZeULkSidUL+ux5/fc24HnuCkZ+5aCFgaGfnL
+    tyVRtbh8SAVjWiBaZnlS4rCrJITIExKlnE8ynkqeysqXqZXuCnIAOtWTzLQRnCXc
+    A+w70/hKFOoR3Rde7a++TissoIgXCU8w9dCmFmknEUFLoYFKpVHHjnb5w6CrbHSc
+    u7V8Yqomx0sxQ7DentHljM7iWBc7OBm/lqpxkFhvGCaDCie5P82gP4qr65QpqQpn
+    K4Cun2v6FET7BxXEAB8YHZpLqh4kAOhfTlO0yg==
+    -----END CERTIFICATE-----
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: prometheus-data
+  labels:
+    app: prometheus
+spec:
+  accessModes:
+    - ReadWriteOnce
+  storageClassName: hostpath
+  resources:
+    requests:
+      storage: 5Gi
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -42,30 +240,21 @@ spec:
               name: http
           volumeMounts:
             - name: config
-              mountPath: /etc/prometheus/prometheus.yml
-              readOnly: true
-            - name: alerts
-              mountPath: /etc/prometheus/alerts.yml
-              readOnly: true
-            - name: vault-cert
-              mountPath: /etc/prometheus/certs/vault.crt
+              mountPath: /etc/prometheus
               readOnly: true
             - name: data
               mountPath: /prometheus
       volumes:
         - name: config
-          hostPath:
-            path: /Users/taolong/Workspaces/influx_db/kubernetes/prometheus/prometheus.yml
-            type: File
-        - name: alerts
-          hostPath:
-            path: /Users/taolong/Workspaces/influx_db/kubernetes/prometheus/alerts.yml
-            type: File
-        - name: vault-cert
-          hostPath:
-            path: /Users/taolong/Workspaces/influx_db/kubernetes/prometheus/certs/vault.crt
-            type: File
+          configMap:
+            name: prometheus-config
+            items:
+              - key: prometheus.yml
+                path: prometheus.yml
+              - key: alerts.yml
+                path: alerts.yml
+              - key: vault.crt
+                path: certs/vault.crt
         - name: data
-          hostPath:
-            path: /Users/taolong/k8s_data/prometheus
-            type: DirectoryOrCreate
+          persistentVolumeClaim:
+            claimName: prometheus-data
