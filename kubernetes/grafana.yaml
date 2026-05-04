@@ -15,6 +15,44 @@ spec:
       protocol: TCP
       nodePort: 30300
 ---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: grafana-provisioning
+  labels:
+    app: grafana
+data:
+  loki.yml: |
+    apiVersion: 1
+    datasources:
+      - name: Loki
+        type: loki
+        access: proxy
+        url: http://loki:3100
+        isDefault: false
+  prometheus.yml: |
+    apiVersion: 1
+    datasources:
+      - name: Prometheus
+        type: prometheus
+        access: proxy
+        url: http://prometheus:9090
+        isDefault: true
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: grafana-data
+  labels:
+    app: grafana
+spec:
+  accessModes:
+    - ReadWriteOnce
+  storageClassName: hostpath
+  resources:
+    requests:
+      storage: 5Gi
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -31,6 +69,21 @@ spec:
       labels:
         app: grafana
     spec:
+      securityContext:
+        fsGroup: 472
+      initContainers:
+        - name: migrate-grafana-data
+          image: busybox:1.36
+          command:
+            - sh
+            - -c
+            - |
+              set -eu
+              mkdir -p /var/lib/grafana
+              chown -R 472:472 /var/lib/grafana
+          volumeMounts:
+            - name: data
+              mountPath: /var/lib/grafana
       containers:
         - name: grafana
           image: grafana/grafana@sha256:ba93c9d192e58b23e064c7f501d453426ccf4a85065bf25b705ab1e98602bfb1
@@ -57,10 +110,13 @@ spec:
               mountPath: /var/lib/grafana
       volumes:
         - name: provisioning
-          hostPath:
-            path: /Users/taolong/Workspaces/influx_db/kubernetes/grafana/provisioning
-            type: Directory
+          configMap:
+            name: grafana-provisioning
+            items:
+              - key: loki.yml
+                path: datasources/loki.yml
+              - key: prometheus.yml
+                path: datasources/prometheus.yml
         - name: data
-          hostPath:
-            path: /Users/taolong/k8s_data/grafana/grafana
-            type: DirectoryOrCreate
+          persistentVolumeClaim:
+            claimName: grafana-data
