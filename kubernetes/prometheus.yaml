@@ -141,6 +141,15 @@ data:
       - job_name: "node"
         static_configs:
           - targets: ["node-exporter:9100"]
+          - targets: ["192.168.0.101:9100"]
+            labels:
+              instance: "rtx5090"
+
+      - job_name: "nvidia_gpu"
+        static_configs:
+          - targets: ["192.168.0.101:9835"]
+            labels:
+              instance: "rtx5090"
 
       - job_name: "mosquitto"
         static_configs:
